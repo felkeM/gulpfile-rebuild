@@ -1,0 +1,125 @@
+// PROSPECTIVE STUDENTS
+
+.hero-contain {
+  .views-field-field-alp-header-text {
+    background: $brick-red;
+    .field-content {
+      display: inline-block;
+      margin: 0;
+      color: #fff;
+      padding: 24px 0;
+      font-size: 36px;
+      font-family: "museo-slab", serif;
+    }
+  }
+}
+
+//intro text field
+.field-name-field-alp-intro-text {
+  font-size: 23px;
+  color: #53565a;
+  font-weight: 100;
+  margin-top: 0;  
+}
+
+.views-field-field-alp-content-highlights {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-left: -20px;
+  width: calc(100% + 40px);
+  > div > div {
+    @include grid-columns(12,6,3);
+    margin-bottom: 20px;    
+    
+    @media #{$medium-only} {
+      &:nth-child(odd) {
+        clear: left;
+      }
+    }
+  }
+  .field-name-field-alp-highlights-title {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  .field-name-field-alp-highlights-subtitle {
+    font-size: 18px;
+    margin: 20px 0 10px;    
+    font-weight: 600;
+  }
+  .field-name-field-alp-highlights-links {
+    padding-left: 20px;
+    .field-item {
+      list-style-type: disc;
+      display: list-item;
+      margin-bottom: 5px;
+    }
+  }
+}
+.views-field-field-alp-content-highlights {
+  padding-bottom: 20px;
+  padding-top: 60px;
+}
+
+// LOWER BUCKETS
+.prospective-success-story, .campus-happenings, .deadlines {
+  @include grid-columns(12,4);
+  .medium-4 {
+    width: 100%;
+    padding: 0;
+  }
+  > h2 {
+    font-size: 16px;
+    background: #545353;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "proxima-nova", sans-serif;
+    margin-top: 0;     
+   } 
+   p {
+     margin-bottom: 15px;
+   }
+}
+
+.prospective-success-story, .campus-happenings {
+  .recent-news .footer-link {
+    width: calc(100% + 40px);     
+  }
+}
+
+.section-prospective-students .deadlines .entity-deadline {
+  margin: 0;
+}
+
+.deadlines {
+  .entity-deadline {
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+  h4 {
+    margin-top: 0;
+  }
+  .deadline-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-weight: 16px;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+  .view-footer {
+    border-top: 0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    
+  }
+}
+

@@ -1,0 +1,269 @@
+.sidebar {
+  .medium-4 {
+    width: 100%;
+    padding: 0;
+  }
+  .node-gmu-event {
+//     padding: 0 20px;
+  }
+  .block-title {
+    font-size: 16px;
+    background: #545353;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;  
+    font-family: $sans-serif;
+  }
+}
+
+.view-gmu-event {
+  .attachment {
+    float: left;
+    margin-bottom: 20px;
+    #filter-bar {
+      float: right;
+      margin-bottom: 0;
+    }
+    
+  }
+  .views-row {
+    padding: 40px 0px 30px 0px;
+    border-top: 1px solid #ccc;
+    float: left;
+    width: 100%;
+    
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+  
+}
+
+.gmu-event-listing {
+  .event-description {
+    margin-top: 0px;
+  }
+  .date-block {
+    margin-top: 0px;
+  }
+}
+
+.field-name-field-event-image-caption  {
+    font-size: 14px;
+    color: #666;
+    padding-top: 2px;
+    clear: both;
+}
+
+// setting the image vs content grid
+  .field-name-field-event-image  {
+    @include grid-columns(12,3);
+    margin-left: -20px;
+    @media #{$small-only} {
+      float: none;
+      margin-bottom: 20px;
+    }
+  }
+.field-name-field-event-image  + .listing-content-container {
+  @include grid-columns(12,9);
+  @media #{$small-only} {
+    float: none;
+    padding: 0px;
+  }
+}
+
+
+// Events filtering
+#edit-school-wrapper > label {
+  display: none;
+}
+
+#views-exposed-form-gmu-event-page {
+  .views-exposed-form .views-exposed-widget {
+    padding: 0;
+  }
+  #edit-submit-gmu-event {
+    margin: 0;
+  }
+  #edit-date-wrapper, #edit-end-date-wrapper {
+    display: none;
+  }
+}
+
+// Event description container
+.view-gmu-event {
+  .body {
+    display: inline-block;
+    
+    p {
+      margin: 0px;
+    }
+  }
+}
+// RELATED EVENTS
+.view-related-events {
+  margin-left: -20px;
+  margin-right: -20px;
+  .views-row {
+    @include grid-columns(12,4);
+  }
+}
+
+// ----- SIDEBAR -----
+
+.block-views-df4872ace78d3b1ccef18f17d3e6b2b0,
+.block-views-gmu-events-by-category-block {
+  margin: 40px auto;
+}
+
+// EVENTS BY DATE
+
+.date-block {
+  width: 70px;
+  float: left;  
+}
+
+.date-desc {
+  width: calc(100% - 70px);
+  float: left;  
+}
+
+// Calendar
+.view-events-calendar, .view-deadline-calendar {
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 40px 50px;
+  
+  // Calendar heading
+  .view-header {
+    background: $sea-blue;
+    color: $white;
+    position: relative;
+    padding: 5px;
+  }
+  
+  // Month and year
+  .date-nav-wrapper .date-heading h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: $white;
+    font-family: $sans-serif;
+    font-weight: 400;
+  }
+  
+  .date-nav-wrapper {
+    margin-top: 0px;
+    
+    .date-nav {
+      margin: 0;
+      min-height: 1px;
+      padding: 0;
+    }
+  }
+  
+  // Left and right arrows in header
+  .date-nav-wrapper .pager {
+    margin: 0px;
+    
+    li {
+      display: inline;
+      float: left;
+      position: absolute;
+      top: 1px;
+      margin: 0px;
+    }
+    
+    .date-prev, .date-next {
+      a {
+        background-repeat: no-repeat;
+        height: 18px;
+        width: 11px;
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+    
+    .date-prev {
+      left: 10px;
+      background: none;
+      a {
+        background-image: url(../img/calendar_arrow_left.png)
+      }
+    }
+    
+    .date-next {
+      right: 10px;
+      background: none;
+      a {
+        background-image: url(../img/calendar_arrow_right.png)
+      }
+      
+    }
+    
+    a {
+      color: $white;
+      padding: 0;
+      margin: 0;
+      border: none;
+      font-size: 0;
+    }
+  }
+  
+  // Calendar content
+  .view-content {
+    table {
+      width: 100%;
+    }
+    
+    // Days of the week
+    thead {
+      color: white;
+      background: #999;
+      border-top: 1px solid #d6e0e0;
+    }
+    
+    tr {
+      background: none;
+    }
+    
+    th {
+      color: $white;
+      border-bottom: none;
+      padding: 2px 0px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      background: none;
+      border: none;
+    }
+    
+    // Calendar dates
+    tbody {
+      color: #53565a;
+      
+      tr {
+        border-top: 1px solid $white;
+
+        td {
+          &:not(:last-child) {
+            border-right: 1px solid $white;
+          }
+        }
+      }
+    }
+    
+    td {
+      background: #e5e5e5;
+      text-align: center;
+      padding: 8px 0px;
+    }
+    
+    .today {
+      background: $brick-red;
+      color: $white;
+    }
+  }
+}

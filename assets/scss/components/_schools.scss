@@ -1,0 +1,229 @@
+// school blocks
+.view-display-id-school_listing_block, .view-display-id-arts_sciences_school_listing_block, .view-display-id-business_education_school_listing_block, .view-display-id-nursing_school_listing_block, .view-display-id-graduate_professional_school_listing_block {
+  .taxonomy-term-description {
+    margin-bottom: 85px;
+  }
+  .schools-contain {
+    position: relative;
+    float: left;
+    .top-panel {
+      position: relative;
+      float: left;
+    }
+  }
+
+  .views-row .medium-6 {
+  	min-height: 500px;
+  	background: rgba(0, 0, 0, 0.65);
+  }
+
+  // float info to the right for every even school
+  .views-row-even .medium-6 {
+    float: right;
+  }
+
+  > div > .views-row {
+    position: relative;
+  	min-height: 500px;
+  	color: $white;
+  	margin-bottom: 25px;
+  	overflow: hidden;
+
+  	.taxonomy-term-description p {
+  		color: $white;
+  		font-size: 18px;
+  		font-weight: 100;
+  		margin: 0;
+  	}
+
+  	// override global heading styles
+  	h1 .field-name-field-school-long-name, .taxonomy-term-description h2 {
+  		line-height: 1.2;
+  		color: $white;
+  	}
+
+  	h1 {
+  		font-size: 55px;
+  		font-weight: 100;
+  		@media #{$medium-up} {
+  			margin: 60px auto;
+  		}
+  		a{
+  		  color: $white;
+  		  text-decoration: none;
+  		  display: inline;
+  		  transition: all 0.4s linear;
+        &:hover{
+  		    color: $link-blue;
+  		  }
+  		}
+  	}
+
+  	.taxonomy-term-description h2 {
+  		font-size: 36px;
+  		font-family: $sans-serif;
+  	}
+
+  	.school-background {
+  		position: absolute;
+  		z-index: -1;
+  		height: 100%;
+  		> div {
+    		height: 100%;
+  		}
+
+  		img {
+  			height: 100%;
+  			max-width: none;
+  			width: auto;
+  			position: absolute;
+  		}
+  	}
+  }
+
+}
+
+.ui-widget {
+  font-family: $sans-serif;
+}
+
+.school-tabs {
+	position: relative;
+	width: 100%;
+	border: none;
+	background: none;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	float: left;
+
+  .ui-tabs-panel {
+    border-width: 5px;
+    padding: 30px 0;
+  }
+
+
+  .tab-btn-list {
+    position: relative;
+  }
+
+  .ui-widget-header {
+  	border: none;
+  	background: none;
+  	border-radius: 0;
+  }
+
+  .ui-tabs-nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+  	@media #{$small-only} {
+    	position: relative;
+      padding: 0;
+  	}
+  	@media #{$medium-up} {
+  		border-bottom: 3px solid #025150;
+  	}
+  }
+
+	.ui-tabs-nav li {
+  	width: 100%;
+		border: none;
+		margin: 0;
+		background: none;
+		border-radius: 0;
+
+		@media #{$medium-up} {
+			@include grid-column(
+				$columns: 4,
+				$collapse: true
+			);
+			padding: 0 5px;
+			&:first-child {
+				padding-left: 10px;
+			}
+
+			&:last-child {
+				padding-right: 10px;
+			}
+		}
+
+		@media #{$small-only} {
+    	padding: 0;
+      border-bottom: 2px solid #025150;
+			&:first-child {
+				border-top: 2px solid #025150;
+			}
+
+			&:last-child {
+				padding-bottom: 0px;
+			}
+
+		}
+	}
+
+	.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+		width: 100%;
+		color: $white;
+		background: $sea-blue;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		padding: 10px 0;
+		font-size: 24px;
+		font-weight: 100;
+	}
+	.ui-state-active a {
+  	background-color: #164040 !important;
+	}
+
+	.field-name-field-school-featured-faculty {
+  	width: 100%;
+  	height: 100%;
+  	margin: 0;
+  	padding: 10px;
+	}
+	.field-name-field-school-featured-faculty > .field-items > .field-item {
+    @include grid-columns(12,4,3);
+    margin-bottom: 20px;
+    float: none !important;
+    display: inline-block;
+    vertical-align: top;
+    min-height: 363px;
+    a {
+      color: #3676bb;
+    }
+    .clearfix:after {
+      content: normal;
+    }
+	}
+	.person-grid {
+  	float: none;
+	}
+
+} // --- schools tab
+
+.school-description {
+		border-left: 6px solid #edce07;
+		padding: 0 20px;
+		position: relative;
+
+	h2 {
+		padding-bottom: 10px;
+	}
+}
+
+.schools-faculty {
+  h2 {
+    padding-left: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.school-tabs .schools-degree {
+  @media #{$small-only} {
+    padding: 20px;
+  }
+}

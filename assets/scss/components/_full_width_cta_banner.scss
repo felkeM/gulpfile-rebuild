@@ -1,0 +1,77 @@
+// "WHAT TYPE OF STUDENT ARE YOU?"
+.field-name-field-interest-panels-block {
+	background: $brick-red;
+	width: 100%;
+	text-align: center;
+	color: $white;
+	padding: 40px 0;
+	
+	h1 {
+		margin: 0;
+	}
+	
+	// "Speak to an Admissions Counselor"
+	span a {
+		color: #81ced0;
+	}
+}
+
+.student-types {
+	margin: 50px 0 75px 0;
+	a {
+		display: inline-block;
+	}
+}
+
+.student-type-link {
+	border: 1px $black solid;
+	color: $black;
+	background-color: $white;
+	padding: 10px 30px;
+	border-radius: 9px;
+	margin: auto 20px;
+}
+
+// "ARE YOU READY FOR WHAT'S NEXT?"
+.are-you-ready {
+	background: #336666;
+	color: $white;
+	text-align: center;
+	padding: 20px 0;
+	border-top: 1px solid $white;
+	
+	// Heading
+	.field-name-field-landing-cta-title {
+		font-size: 33px;
+		display: inline-block;
+		margin: auto 15px;
+	}
+	
+	// Links
+	.field-name-field-landing-cta-links {
+		display: inline-block;
+		
+		// Link container
+		.field-item {
+			display: inline-block;
+			margin: auto 5px;
+		}
+		
+		a {
+			display: inline-block;
+			font-size: 20px;
+			color: #666;
+			padding: 10px;
+			border: 1px solid #9c9595;
+			background: $white;
+		}
+		
+		.btn-220 a {
+			width: 220px;
+		}
+		
+		.btn-170 a {
+			width: 170px;
+		}
+	}
+}

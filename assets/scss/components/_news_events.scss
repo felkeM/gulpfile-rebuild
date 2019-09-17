@@ -1,0 +1,471 @@
+/*
+----- THINGS TO BE FIXED -----
+Upcoming Events
+  Spacing between date block and text is too small
+Social media
+  Stylying for Facebook, Twitter, and Instagram sections
+
+*/
+
+.featured-news-events-container {
+  clear: both;
+  float: left;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-bottom: 30px;
+  &:last-child {
+	margin-bottom: 0;
+  }
+  .recent-news .view-footer, .mervs-word .view-footer {
+    border-top: 0;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+}
+
+.title {
+  font-weight: 300;
+}
+
+// Applied to all small italic spans
+// that are: dates, names, and times
+.field-name-field-news-date,
+.field-name-field-blog-post-author,
+.extra-date-field, .views-field-timestamp {
+  margin: 5px auto;
+}
+
+// Everything under the headers
+.view-display-id-blog_post_block,
+.view-display-id-news_and_events_recent_news_block,
+.view-upcoming-events {
+  border: 1px solid #ccc;
+}
+
+.featured-blog-post, .recent-news, .upcoming-events {
+  @media #{$small-only} {
+    margin-bottom: 40px;
+  }
+}
+
+a.node-title {
+  font-size: 16px;
+  text-transform: uppercase;
+//   margin: 15px auto;
+  font-weight: 600;
+}
+
+// Link at bottom
+.view-footer {
+  border-top: 1px solid #ccc;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+// Container for: recent news and upcoming events only
+// (excludes section headers)
+// Doesn't include featured blog post because padding
+// and borders already exist.
+.view-display-id-news_and_events_recent_news_block,
+.view-upcoming-events {
+  // Container for each news item
+  .views-row {
+    padding: 20px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+// FEATURED NEWS STORY CONTAINER
+.node-news-and-events {
+  .field-name-field-news-events-featured-news {
+    background: #eaeaea;
+    margin-top: 35px;
+    margin-bottom: 50px;
+  }
+
+  .large-news-image {
+    padding: 0px;
+    img {
+      width: 100%;
+    }
+  }
+
+  // Left half of the story (image)
+  .field-name-field-news-image {
+    padding-left: 0; // Flush to left
+  }
+
+  // Right half of the story (info)
+  .medium-6:last-child {
+    h2 {
+      font-size: 24px;
+    }
+    // Date and description of news story
+    .field-name-field-news-date, p {
+	    color: #53565a;
+	    font-weight: 100;
+    }
+
+    // Date
+    .field-name-field-news-date {
+	    font-size: 15px;
+    }
+
+    // Description
+    p {
+	    font-size: 18px;
+	    line-height: 1.7;
+	    margin-top: 5px;
+    }
+  }
+
+  // Title
+  .node-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+}
+
+// Contains the entire second row on the page
+// (featured blog post, recent news, upcoming events)
+.news-container {
+  float: left;
+  margin-left: -20px;
+  margin-right: -20px;
+
+  p {
+    font-size: 16px;
+    color: #3a3a3a;
+    margin: 0px;
+    font-weight: 600;
+  }
+}
+
+// FEATURED BLOG POST
+.featured-blog-post {
+  .field-collection-view {
+    padding: 20px 20px 0 20px;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  }
+  h2 {
+    font-size: 16px;
+    background: #545353;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-family: $sans-serif;
+    font-weight: 400;
+  }
+  .field-name-field-blog-post-author .field-item {
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+    color: #666;
+  }
+  .field-name-field-blog-post-title {
+    a {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: "proxima-nova", sans-serif;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+  }
+  .field-name-field-blog-post-description {
+    font-size: 16px;
+    color: #3a3a3a;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+  }
+  .field-name-field-blog-post-link {
+    a {
+      padding: 10px 20px;
+      margin-left: -20px;
+      font-size: 16px;
+      width: calc(100% + 40px);
+      display: inline-block;
+      &:after {
+        content: '\00BB';
+        padding-left: 5px;
+      }
+    }
+  }
+  .block-title {
+    font-size: 16px;
+    background: #545353;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-family: $sans-serif;
+    font-weight: 400;
+  }
+  // Container for everything under section header
+  .view-display-id-blog_post_block {
+    .upper-content {
+      padding: 20px;
+    }
+  }
+
+  // Blog post title
+  .field-name-field-blog-post-title {
+    margin-top: 20px;
+  }
+
+  // Blog post description
+  .field-name-field-blog-post-description p {
+
+  }
+}
+
+// Main content of featured blog post
+.upper-content {
+  padding: 20px;
+}
+
+//STUDENT SUCCESS STORY
+.student-success-story {
+  .date-display-single {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.student-success {
+  p {
+    font-weight: normal;
+    padding-bottom: 20px;
+  }
+}
+
+// RECENT NEWS
+.recent-news, .student-success, .mervs-word {
+  .views-row {
+    padding: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  .block-title, .title {
+    font-size: 16px;
+    background: #545353;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-family: $sans-serif;
+    font-weight: 400;
+  }
+  h2, h2 a, a h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: $sans-serif;
+    margin-top: 15px;
+    color: $link-blue;
+  }
+  .date-display-single {
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+    color: #666;
+    margin: 5px 0;
+  }
+  p {
+//     font-weight: 600;
+  }
+  .footer-link {
+    border-top: 1px solid #ccc;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-top:20px;
+    width: calc(100% + 40px);
+    a {
+      color: $link-blue;
+    }
+  }
+}
+.view-gmu-news, .view-mervs-word {
+  .node-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: $sans-serif;
+    margin-top: 0px;
+  }
+  .date-display-single {
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+    color: #666;
+  }
+  p {
+    font-size: 16px;
+    color: #3a3a3a;
+    font-weight: normal;
+    margin-bottom: 0px;
+  }
+
+}
+
+// UPCOMING EVENTS
+.featured-upcoming-events {
+ .title {
+  font-size: 16px;
+  background: #545353;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  margin-top: 0;
+  font-family: $sans-serif;
+  font-weight: 400;
+ }
+}
+
+
+// Container for everything under section header
+
+.view-display-id-school_listing_block > div > .node-gmu-event .views-row h2 {
+  font-size: 16px;
+}
+
+.node-gmu-event.view-mode-small_listing {
+  .date-block {
+    width: 70px;
+    float: left;
+  }
+  .date-desc {
+    width: calc(100% - 70px);
+    float: left;
+    @media only screen and (min-width: 642px) and (max-width: 768px) {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+  .views-row {
+    padding: 20px;
+  }
+}
+
+.upcoming-events, .node-gmu-event {
+
+  .block-title {
+    font-size: 16px;
+    background: #545353;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  h2, h2 a {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: $sans-serif;
+    margin-top: 0px;
+  }
+  .date-display-single {
+    font-size: 15px;
+    font-weight: 100;
+    font-style: italic;
+    color: #666;
+  }
+  p {
+    font-size: 16px;
+    color: #3a3a3a;
+    font-weight: 600;
+    margin-bottom: 0px;
+  }
+  .oho-date-block, .oho-date-block small {
+    float: left;
+    margin-right: 10px;
+    background: $brick-red;
+    color: white;
+  }
+
+}
+
+// SOCIAL MEDIA
+
+#social-media-footer {
+  padding: 0;
+  margin-bottom: 40px;
+  h2 {
+    padding-bottom: 20px;
+    margin-top: 0;
+  }
+   h1 {
+    text-align: center;
+    font-family: $sans-serif;
+    font-size: 36px;
+    margin: 60px 0 40px;
+    padding: 0 20px;
+  }
+
+  .block-twitter-block {
+    @media #{$small-only} {
+      padding: 0 20px;
+      margin-top: 40px;
+    }
+  }
+
+  .instagram-feed {
+    @media #{$small-only} {
+      margin-top: 40px;
+    }
+  }
+
+  .medium-4:first-child {
+    padding-left: 0px;
+  }
+
+  .medium-4:last-child {
+    padding-right: 0px;
+  }
+}
+
+// instagram
+.view-instagram-feed {
+  max-height: 600px;
+  overflow-y: scroll;
+  .pro-info {
+    width: 100%;
+    clear: both;
+    float: left;
+    padding-bottom: 20px;
+  }
+  .medium-8 {
+    padding: 0;
+    a {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  .views-row {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+}
+
+.facebook-feed {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.block-twitter-block {
+  @media #{$small-only} {
+    padding: 40px 0;
+  }
+}

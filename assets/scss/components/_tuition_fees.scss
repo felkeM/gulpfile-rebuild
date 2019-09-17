@@ -1,0 +1,327 @@
+/*
+------------------------
+TUITION & FEES 
+------------------------
+*/
+
+// NAV
+
+.block-gmu-tuition-fees {
+  .ui-widget, .ui-widget-content {
+    border-radius: 0;
+    border: none;
+  }
+  .ui-tabs .ui-tabs-nav {
+    border-radius: 0;
+    border: none;
+    background: none;
+    padding: 0 15px;
+  }
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default  {
+    border-radius: 0;    
+    width: 24%;
+    float: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0 5px;
+    border: 0px;
+    background: none;
+    @media screen and (max-width: 830px) {
+      display: block;
+      width: 100%;
+    }
+    a {
+      box-shadow: inset 0px -1px 0px 0px #cccccc;
+      background: #f0f0f0;      
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 16px;
+      color: black;
+      text-align: center;
+      padding: 7px 10px;
+      padding-bottom: 7px;
+      display: block; 
+      margin: 0;    
+      width: 100%;
+      @media #{$large-up} {
+        &:hover {
+          padding: 10px;
+        }
+      }
+    }
+  }
+  .ui-widget-content .ui-state-active {
+    a {
+      background: $white;
+      box-shadow: none;
+      border: 1px solid #ccc;
+      border-bottom: 0;
+      padding: 10px;   
+    }
+  }
+  .ui-tabs-panel  {
+    border: 1px solid #ccc;
+    margin-top: -7px;
+    @media screen and (max-width: 830px) {
+      margin-top: 0;
+    }    
+  }
+}
+
+// Custom Class for hiding tranfer/tuition tab
+
+
+  #tuition-types li.ui-corner-top[aria-controls="tab-191"]{
+	display:none;
+	visibility:hidden;
+  }
+
+// -------PANELS
+
+// select
+.view-tuition-type {
+  form {
+    max-width: 575px;
+    background: #e0e0e0;
+    padding: 13px 20px;
+  }
+  .views-exposed-widgets {
+    margin: 0;
+  }
+  .views-exposed-form .views-exposed-widget {
+    padding: 0;
+    margin: 0;
+  }
+  label {
+    float: left;
+    padding-top: 2.5px;
+  }
+  .views-widget {
+    float: left;
+    width: 100%;
+    @media #{$large-up} {
+      padding-left: 30px;
+      width: auto;
+    }
+    .form-select {
+      width: 100%;
+    }
+  }
+  select {
+    font-size: 14px;
+    height: 25px;
+    font-family: $sans-serif;
+  }
+}
+
+// dropdowns
+.tuition-type-group-link {
+  padding: 13px 20px;
+  padding-right: 48px;
+  background: $brick-red;
+  display: block;
+  margin: 10px 0;
+  position: relative;
+  &:after {
+    background-image: url("../img/faq-plus.png");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: center center;
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 100%;
+    right: 17px;
+    top: 0;
+    transition: $transition;  
+  }
+  span {
+    color: $white;
+    font-family: $sans-serif;
+    &:first-child {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    &:nth-child(2) {
+      font-style: italic;
+      font-weight: 100;
+      padding-left: 17px;
+    }
+  }
+}
+.tuition-type-group-link.active:after {
+  transition: $transition;
+  background-image: url("../img/faq-minus.png");
+  transform: rotate(180deg);
+}
+
+
+
+.fees-dropdown-content {
+  float: left;
+  width: 100%;
+  
+}
+
+.tuition-type-group-content {
+  > div > div {
+    background: #f0f0f0;
+    float: left;
+    width: 100%;
+    padding: 13px 15px;
+    &:nth-child(odd) {
+      background: $white;
+    } 
+  }
+  .fees-header  {
+    font-size: 18px;
+    font-weight: 600;
+    float: left;
+  }
+  .fees-price {
+    float: right;
+  }
+  .content {
+    padding-left: 20px;
+  }
+}
+
+.fees-break-down {
+  font-size: 14px;
+  float: left;
+  padding-left: 20px;
+  span {
+    font-style: italic;
+  }
+}
+
+.header-alone {
+  .fees-header {
+    clear: right;
+    float: none;
+    width: 100%;
+    padding: 13px 15px 13px 0;    
+  }
+}
+
+
+
+// financial aid steps
+.block-boxes-financial-aid-steps {
+  .boxes-box-content {
+    border: 1px solid #ccc;
+    border-top: 0;    
+    padding: 0 20px;
+  }
+  ol {
+    counter-reset: item;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 50px;
+  }
+  li {
+    font-weight: 600;
+    margin: 0;
+    padding: 20px 0;
+    display: block;
+    position: relative;
+    &:before {
+    content: counter(item) "";
+    counter-increment: item;
+    text-align: center;
+    color: white;
+    left: -50px;
+    padding: 2px 0 0 0;
+    top: 12px;
+    font-size: 24px;
+    font-weight: 400;
+    background-image: url(../img/dark-red-circle.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    line-height: 35px;
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    z-index: -1;
+    }
+  }
+}
+
+// FINANCIAL AID PROCESS
+#boxes-box-financial_aid_steps {
+  .boxes-box-content {
+    padding: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+  }
+  p {
+  	border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 10px 0 10px 20px;
+  }
+  p:last-child {
+   border-bottom: none;   
+  }
+}
+
+// Type of Aid
+#boxes-box-type_of_aid {
+  .boxes-box-content {
+    padding: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+  }
+  p {
+  	border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 10px 0 10px 20px;
+  }
+  p:last-child {
+   border-bottom: none;   
+  }
+}
+
+// Price Calculator
+
+.sidebar .block-boxes-net-price-calculator {
+  .boxes-box-content {
+    padding: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+  }
+  p, a{
+  	padding:0;
+  	margin:0;  
+  }
+  img{
+    display:block;
+  	padding:0;
+  	margin:0;
+  	outline:none;
+  	border:none;
+  }
+}
+
+/* Price Calculator - Old CSS Code */
+
+/*
+.sidebar .block-boxes-net-price-calculator {
+  position: relative;
+  margin-top: 40px;
+  .block-title {
+    background: none;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 0;
+    margin-top: 0;
+    position: absolute;
+    bottom: 11px;
+    left: 20px;
+    padding-right: 15px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+*/

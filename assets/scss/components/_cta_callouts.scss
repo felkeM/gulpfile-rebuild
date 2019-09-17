@@ -1,0 +1,188 @@
+// CALL TO ACTION CALLOUTS
+.node-type-landing-page {
+  .field-name-field-cta-block-links {
+    padding: 20px 0 30px;
+  }
+}
+
+
+.front .bean-cta-block {
+  @media #{$small-only} {
+    display: block;
+  }
+}
+
+.bean-cta-block {
+  @media #{$small-only} {
+    display: none;
+  }
+}
+
+// CTA callouts container
+.front {
+  .field-name-field-cta-block-links {
+    float: none;
+  }
+}
+
+.field-name-field-cta-block-links {
+	text-align: center;
+	padding-top: 40px;
+	max-width: 1200px;
+	margin: 0 auto;
+	float: left;
+	width: 100%;
+	> div > .field-item {
+    @include grid-columns(12,3);
+    @media only screen and (min-width: 642px) and (max-width: 768px) {
+     padding: 0 15px;
+    } 
+	}
+	
+	// CTA callout
+	.cta-callout {  	
+    @media #{$small-only} {
+      margin-bottom: 20px;
+    }  	
+  	a {
+    	color: #666666;
+      border: 1px solid #d6d6d6;
+      line-height: 1;
+      display: block;
+      padding: 10px 0;
+      transition: $transition;
+      @media #{$large-up} {
+        .field-name-field-cta-block-link-image {
+          transition: $transition;
+        }
+        span {
+          transition: $transition;
+        }
+        &:hover {
+          transition: $transition;
+          background: #e9e9e9;
+         .field-name-field-cta-block-link-image {
+           transition: $transition;
+           margin-left: -60px;
+           opacity: 0;
+         }
+         span {
+           &:after {
+             content: $arquo;
+             padding-left: 5px;
+             transition: $transition;             
+           }
+         }
+        }
+      }
+      @media #{$medium-only} {
+        font-size: 13px;
+      }
+	  }
+	  
+    .field-item {
+      padding-left: 0;
+      padding-right: 15px;
+      @media #{$medium-only} {
+        padding-right: 5px;
+        width: 40px;
+      }
+    }
+  	
+  	// setting hard positions on the images and text
+  	// in each CTA button
+  	&:nth-child(1) {
+    	.cta-image {
+      	top: 20px;
+      	left: 53px;
+    	}
+    	
+    	.cta-text {
+      	left: 103px;
+    	}
+  	}
+  	
+  	&:nth-child(2) {
+    	.cta-image {
+      	top: 17px;
+      	left: 25px;
+    	}
+    	
+    	.cta-text {
+      	left: 83px;
+    	}
+  	}
+  	
+  	&:nth-child(3) {
+    	.cta-image {
+      	top: 18px;
+        left: 35px; 	
+    	}
+    	
+    	.cta-text {
+      	left: 85px;
+    	}
+  	}
+  	
+  	&:nth-child(4) {
+    	.cta-image {
+      	top: 18px;
+      	left: 35px;
+    	}
+    	
+    	.cta-text {
+      	left: 85px;
+    	}
+  	}
+  	
+  	@media screen and (min-width: 1200px) {
+    	
+    	&:first-child {
+      	padding-left: 0px;
+    	}
+    	
+    	&:last-child {
+      	padding-right: 0px;
+    	}
+  	}
+	}	
+}
+
+// CTA image and text container
+.cta-info-container {
+	padding: 10px;
+	position: relative;
+}
+
+.cta-link {
+  span {
+    display: inline-block;
+    @media only screen and (min-width: 642px) and (max-width: 768px) {
+      display: block;
+      padding-top: 5px;
+    }
+  }
+}
+// CTA image container
+.field-name-field-cta-block-link-image {
+  display: inline-block;
+  width: auto;
+    @media #{$medium-only} {
+      width: 25%;
+  }
+}
+
+// CTA 'img' element
+.cta-image {
+  width: auto;
+  position: absolute;
+  top: 16px;
+}
+
+// CTA 'span' element
+.cta-text {
+  position: absolute;  
+	color: #666;
+	font-size: 19px; // PSD says 18.91px...
+	font-weight: 100; // PSD says "light"
+}

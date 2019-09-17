@@ -1,0 +1,104 @@
+/*
+----------------------------
+GLOBAL SITE TO SITE ELEMENTS
+----------------------------
+*/
+
+
+
+// WRAPPER
+header {
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  
+  .super-header ul{
+    @media #{$large-up} {
+      width: auto;
+      display: inline-block;
+    }
+    padding-left: 0;    
+    li {
+      @media #{$large-up} {
+        width: auto;
+        display: inline-block;
+      }
+      list-style-type: none;
+      display: block;
+    }
+  }
+}
+
+.navbar-horizontal header { /* Drupal Admin Bar allowance */
+  margin-top: 39px;
+}
+
+.navbar-tray-open header {
+  margin-top: 0px;
+}
+
+// Nav Drops
+.main-nav {
+  .menu > li ul {
+    @media #{$large-up} {  
+      display: none;
+    }
+    li {
+      display: block;
+      float: none;
+    }
+  }
+  .menu li:hover {
+    ul {
+      @media #{$large-up} {
+        display: block;
+      }
+    }
+  }
+}
+
+.menu-toggle {
+  width: 38px;
+  height: 32px;
+  background-image: url(../img/menu-toggle.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 20px;
+  top: 7px;
+  cursor: pointer;
+  transition: $transition;
+  @media #{$large-up} {
+    display: none;
+  }
+}
+
+.overview {
+  @media #{$large-up} {
+    display: none;
+  }
+}
+
+.menu-toggle-active {
+  background-image: url(../img/menu-toggle-active.png);
+}
+
+.main-nav {
+  position: absolute;
+  @media #{$large-up} {
+    float: right;
+    position: relative;
+  }
+  li {
+    @media #{$large-up} {  
+      float: left;
+    }
+  }
+}
+
+// LABEL OVERRIDES
+.view-contact-information-listing-block {
+  label {
+    display: none;
+  }
+}

@@ -1,0 +1,45 @@
+.view-mode-full_listing .field-name-field-event-date {
+  margin-right: 20px;
+  float: left;
+}
+
+.view-mode-small_feature .field-name-field-event-date {
+  margin-right: 15px;
+  float: left;
+}
+
+.oho-date-block {
+  float: left;
+  background: $brick-red;
+  color: $white;
+  text-align: center;
+  padding: 5px;
+  width: auto;
+  height: auto;
+}
+
+.oho-date-block.small, .oho-date-block.medium {
+  width: auto;
+  height: auto;
+  padding: 6px 10px 4px;
+}
+
+.oho-date-block.medium, .oho-date-block.small {
+  .oho-date-block--month {
+    font-size: 16px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .oho-date-block--day {
+    font-size: 24px;
+    line-height: 1;
+  }
+}
+.event-info {
+  float: left;
+}
+
+.field-name-field-event-location {
+  margin: 5px auto;
+}

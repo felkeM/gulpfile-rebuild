@@ -1,0 +1,268 @@
+/*
+----------------
+PROGRAMS
+----------------
+*/
+
+// *** DEGREE COLOR VARIABLES
+$prgm-gray: #545353;
+$prgm-teal: #006867;
+$prgm-blue: #81ced0;
+$prgm-navy: #284a5c;
+$prgm-red: #b63939;
+$prgm-ltgray: #f0f0f0;
+
+//PAGE
+
+#node-26{
+  h1 {
+    margin-top: 0;
+  }
+}
+
+//FILTERING
+.select-filtering-widget {
+  display: none;
+}
+
+.filtering-header {
+  font-family: $sans-serif;
+  background: #545353;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+  text-transform: uppercase;
+    @media #{$small-only}{
+	    background: url(../img/arrow-down.png) #545353 no-repeat 95%;
+	    &.expanded{
+		    background: url(../img/arrow-up.png) #545353 no-repeat 95%;
+	    }
+    }
+}
+
+.programs-filtering {
+  width: 100%;
+  clear: both;
+  float: left;
+  position: relative;
+  margin-bottom: 10px;
+  label {
+    text-transform: uppercase;
+    padding: 10px 0;
+  }
+}
+
+.interest-filters, .campus-filters, .degree-filters, .offering-filters {
+  padding: 0 15px 15px;
+  @media #{$medium-up} {
+    width: 25%;
+    float: left;
+  }
+  > div {
+    padding: 5px 0;
+    input {
+      margin-right: 5px;
+    }
+  }
+  label + div {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+
+  }
+}
+
+//PROGRAMS GRID
+
+#views-exposed-form-degrees-degree-listing-block{
+  .views-exposed-form{
+    background-color: $prgm-ltgray;
+    padding: 10px;
+
+    .views-exposed-widgets{
+      .programs-filtering{
+        .interest-filters{
+          display: none;
+          visibility: hidden;
+        }
+      }
+    }
+
+    @media #{$small-only} {
+      display: none;
+    }
+
+    @media #{$medium-up} {
+      display: block !important;
+    }
+
+    .bef-toggle{
+      border-bottom: 1px solid #cccccc;
+    }
+
+    .form-checkboxes label {
+      font-weight: normal;
+      white-space: nowrap;
+    }
+
+    @media #{$medium-only} {
+      .offering-filters {
+        clear: left;
+        margin: 10px 10px 0 0;
+      }
+
+      .campus-filters {
+        margin: 10px 0 0 0;
+      }
+    }
+
+    .clear-filters-contain{
+      background: none;
+      text-align: right;
+      width: 100%;
+      clear: both;
+      padding: 10px 15px 0 0;
+
+      #edit-reset{
+        background: none;
+        color: #3676bb;
+        text-decoration: none;
+        border: none;
+      }
+    }
+  }
+  .views-exposed-widget{
+    width: 24%;
+    background-color: #ffffff;
+    padding: 10px;
+
+    @media #{$small-only} {
+      width: 100%;
+      float: none;
+    }
+
+    @media #{$medium-only} {
+      width: 48%;
+    }
+  }
+
+  .views-submit-button{
+    display: none;
+  }
+
+  #show-programs{
+    display: none;
+    background: $prgm-ltgray;
+    padding: 10px;
+
+    @media #{$small-only} {
+      display: block;
+    }
+  }
+}
+
+
+.programs-table-contain {
+  border: 1px solid #cccccc;
+  padding: 10px 5px 5px 5px;
+  border: none;
+  @media only screen and (max-width: 780px) and (min-width: 642px) {
+    zoom: .8;
+  }
+  @media #{$small-only} {
+    overflow-x: scroll;
+  }
+
+}
+
+.programs-table {
+  width: 100%;
+  padding: 0;
+  clear: both;
+
+  .program{
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: $prgm-ltgray;
+    font-size: 14px;
+  }
+
+  .program-details{
+    display: none;
+
+    .mini-display{
+      display: none;
+    }
+
+    @media #{$small-only} {
+      .full-display{
+        display: none;
+        width:0;
+      }
+
+      .mini-display{
+        display: block;
+        padding: 0 0 10px 0;
+        border-bottom: 1px solid #cccccc;
+      }
+    }
+
+    @media only screen and (min-width: 64.063em) {
+      .full-display{
+        display: table-cell;
+      }
+
+      .mini-display{
+        display: none;
+      }
+    }
+
+  }
+  .program-name {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 0px;
+    background: #920710;
+    padding: 10px 15px;
+    min-height:44px;
+  }
+
+  .expander-icon{
+    float: right;
+    font-size: 24px;
+  }
+
+  .full {
+    width: 98%;
+    padding: 0;
+    border: none;
+    margin: 10px auto;
+    thead {
+      tr th {
+        color: #333;
+        background-color: #f2f2f2;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 10px 15px;
+        border-bottom: 2px solid #cccccc;
+        border-right: none;
+      }
+    }
+    tbody {
+      tr td{
+        padding: 10px 15px;
+        border-right: none;
+      }
+    }
+    .additional-info{
+      border-top: 2px solid #ccc;
+      padding: 0 10px;
+    }
+  }
+
+}
+
+// ---- programs table

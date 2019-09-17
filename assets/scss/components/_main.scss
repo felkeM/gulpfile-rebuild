@@ -1,0 +1,172 @@
+// PREVENT HORIZONTAL SCROLLING
+.page {
+  max-width: 100%;
+  overflow-x: hidden; 
+  margin-top: 145px;  
+  @media #{$large-up} {
+    margin: 0;
+  }   
+}
+
+.node-type-page #page-wrapper, .node-type-degree #page-wrapper {
+  @media #{$large-up} {
+    margin-top: 45px;
+  }
+}
+
+/*
+#page-wrapper {
+  margin-top: 145px;  
+  @media #{$large-up} {
+    margin: 0;
+  }
+}
+*/
+
+.padded-row { /* Row with no child columns to add the buffer padding */
+  @include grid-row();
+  
+  padding: 0 20px;
+}
+
+#page-title {
+  margin: auto;
+}
+
+.obj-left {
+  @include obj-left;
+}
+
+.obj-right {
+  @include obj-right;
+}
+
+.obj-center {
+  @include obj-center;
+}
+
+.basic-page h3 {
+  color: #990000;
+}
+
+figcaption {
+  font-size: 14px;
+  color: #666;
+}
+
+.back-to-top {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+a {
+  transition: $transition;
+  &:hover {
+    transition: $transition;
+  }
+}
+
+// SIDEBAR
+.sidebar-links .item-list {
+  font-size: 16px;
+  
+  ul {
+    padding-left: 0;
+  }
+  
+  li {
+    background-image: url("../img/supporting-link-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 95%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: $transition;
+    &:hover {
+      transition: $transition;
+      background-color: #f8f8f8;
+    }    
+  }
+  
+  // Takes the top border away from the 2nd link onward
+  // so borders don't overlap
+  li:nth-child(n+2) {
+    a {
+      border-top: 0;
+    }
+  }
+  
+  a {
+    display: block;
+    color: #666;
+    border: 1px solid #ccc;
+    padding: 15px 30px 15px 15px;
+  }
+}
+
+.sidebar-links .view-related-schools {
+  a {
+    display: block;
+    color: #666;
+    border: 1px solid #ccc;
+    padding: 15px;
+  }
+  .views-field-field-school-long-name {
+    background-image: url("../img/supporting-link-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 95%;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: $transition;
+    &:hover {
+      transition: $transition;
+      background-color: #f8f8f8;
+    }    
+  }
+}
+
+.sidebar .recent-news h2 a, .sidebar .recent-news h2 {
+  margin-top: 0;
+}
+
+.sidebar .recent-news .view-footer {
+  border-top: 0;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+// Dark gray box style that sits above news sections, sidebars, etc.
+.views-field-field-page-supporting-link-title div {
+  font-size: 16px;
+  background: #545353;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.view-gmu-event, .view-gmu-news {
+  .attachment {
+    float: left;
+    margin-bottom: 20px;
+    #filter-bar {
+      float: right;
+      margin-bottom: 0;
+    }   
+  }
+}
+
+#filter-bar {
+  float: none;
+  padding: 0 5px;
+  margin-bottom: 20px;
+  a:before {
+    content: "-";
+    padding-right: 5px;
+    color: black;
+    font-weight: normal;
+  }
+}
+

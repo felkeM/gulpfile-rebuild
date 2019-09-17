@@ -1,0 +1,108 @@
+.node-faculty {
+	span {
+		display: block;
+	}
+}
+
+.faculty-image {
+	padding-left: 15px;
+	@media #{$small-only} {
+  	padding: 0 0 15px 0;
+	}
+	img {
+  	width: 100%;
+	}
+}
+
+.faculty-info {
+	font-size: 16px;
+	padding-left: 30px;
+	@media #{$small-only} {
+  	padding-left: 0;
+  	padding-bottom: 25px;
+	}
+	h1 {
+  	margin-top: 0;
+	}
+	h2 {
+		margin: auto;
+	}
+	
+	.bold {
+		font-weight: bold;
+	}
+	
+	.faculty-phone, .faculty-email {
+		a {
+  		padding: 10px 0 10px 50px;
+      background-repeat: no-repeat;
+      display: block;
+    }
+	}
+	
+	.faculty-phone {
+		a {
+			color: $black;
+			font-size: 18px;
+			background-image: url(../img/phone-icon.jpg);
+			background-position: 5px center;
+		}
+	}
+	
+	.faculty-email {
+  	a {
+    	background-image: url(../img/email-icon.jpg);  	
+      background-position: left center;
+    }
+	}
+	
+	.faculty-office, .faculty-education {
+		margin-top: 20px;
+		p {
+  		margin: 0;
+		}
+	}
+}
+
+.university-title {
+  margin-bottom: 15px;
+  span {
+  	color: #666;
+  	font-size: 19px;
+  	margin-bottom: 5px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0px;
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+}
+
+.bio-lower {
+	float: left;
+}
+
+
+.publications {
+	span {
+		margin-top: 15px;
+		margin-bottom: 30px;
+		font-family: $sans-serif;
+		font-size: 15px;
+		color: #333;
+		
+		&:last-child {
+			margin-bottom: 80px;
+		}
+	}
+}
+
+
+.node-faculty .body {
+	float: left;
+}
+

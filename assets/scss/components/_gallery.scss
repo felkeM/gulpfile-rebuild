@@ -1,0 +1,86 @@
+/*
+----------------
+GALLERY
+----------------
+*/
+.entity-tour-gallery {
+  h3 {
+    margin-bottom: 10px;
+  }
+  .gallery-messaging-container {
+    position: relative;
+  }
+  .media-youtube-video {
+    text-align: center;
+    background: #e9e9e9
+  }
+  .gallery-messaging {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,.65);
+    padding: 15px;
+    display: block;
+    width: auto;
+    min-width: 100%;
+    * {
+      color: white;
+    }
+    .field-name-field-tour-gallery-subtitle {
+      font-size: 18px;
+    }
+    .field-name-field-tour-gallery-description {
+      font-weight: 100;
+    }
+  }
+
+  .slick-pager {
+    padding: 15px 40px;
+    background: #e9e9e9;
+    position: relative;
+    .slick-slide {
+      padding: 0 10px;
+    }
+  }
+  .slick-prev, .slick-next {
+    background-repeat: no-repeat !important;
+    background-position: center;
+    background-size: 27px;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    padding: 0;
+    font-size: 0;
+    top: 40%;
+    transition: $transition;
+    &:hover {
+      transition: $transition;
+      opacity: .75;
+    }
+  }
+  .slick-prev {
+    background: url(../img/slick-next.png);
+    right: -35px;
+  }
+  .slick-next {
+    background: url(../img/slick-prev.png);
+    left: -35px;
+  }
+}
+
+/* Sidebar Boxes */
+
+#boxes-box-virtual_tour_explore_campus, #boxes-box-virtual_tour_student_life {
+  .boxes-box-content {
+    padding: 0;
+    border: 1px solid #ccc;
+    border-top: 0;
+  }
+  p {
+  	border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 10px 0 10px 20px;
+  }
+  p:last-child {
+   border-bottom: none;
+  }
+}

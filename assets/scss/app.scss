@@ -1,0 +1,134 @@
+// --------------------------------------------------
+// APP.SCSS
+// --------------------------------------------------
+// This is our main SCSS file that imports everything
+// that gets compiled into app.css
+
+// Import order:
+// 1.  Encoding
+// 2.  Variables
+// 3.  Foundation
+// 4.  Helpers
+// 5.  Base
+// 6.  Components
+// 7.  Layout
+// 8.  Vendor
+//
+//
+// Encoding
+// --------------------------------------------------
+@charset "UTF-8";
+
+//
+// Variables
+// --------------------------------------------------
+// Import our global variables first so we can use
+// them in Foundations's variables file
+
+// Global Config Variables
+@import "variables/config";
+
+//
+// Foundation
+// --------------------------------------------------
+// Source: http://foundation.zurb.com/docs/
+// Notes:
+// 1. Foundation's component styles are set
+//    in vendor/foundation/_settings.
+// 2. Modify the _settings.scss file before overriding
+//    the component styles on your own.
+
+// Import all of Foundation
+@import "vendor/foundation";
+
+//
+// Helpers
+// --------------------------------------------------
+
+// Functions
+@import "helpers/functions";
+
+// Placeholders
+@import "helpers/placeholders";
+
+// Mixins
+@import "helpers/mixins";
+
+//
+// Base
+// --------------------------------------------------
+
+@import "base/type";
+@import "base/elements";
+@import "base/drupal/overrides";
+@import "base/stickyheader.scss";
+
+
+//
+// Components
+// --------------------------------------------------
+
+// General stylesheets
+@import "components/breadcrumbs";
+@import "components/main";
+@import "components/type";
+@import "components/wrapper";
+
+// Page-specific stylesheets
+@import "components/faculty";
+@import "components/faculty_bio";
+@import "components/programs";
+@import "components/schools";
+@import "components/admissions_aid";
+@import "components/academics";
+@import "components/news_events";
+@import "components/degree_detail";
+@import "components/events_listing";
+@import "components/events_detail";
+
+// Component stylesheets
+@import "components/person_grid";
+@import "components/more_on";
+@import "components/hero";
+@import "components/form";
+@import "components/cta_callouts";
+@import "components/cta_callouts_sidebar";
+@import "components/statistics";
+@import "components/cta_banner";
+@import "components/page_callouts";
+@import "components/lead-in";
+@import "components/schools_tab";
+@import "components/student_story";
+@import "components/news_listing";
+@import "components/event";
+@import "components/events_by_category";
+@import "components/financial_aid";
+@import "components/prospective_students";
+@import "components/news_detail";
+@import "components/tuition_fees";
+@import "components/homepage";
+@import "components/table_default";
+@import "components/gallery";
+
+// Component Misc
+@import "components/countdown";
+// @import "components/formassembly";
+
+
+//
+// Layouts
+// --------------------------------------------------
+
+// Mixins
+@import "layout/header";
+@import "layout/footer";
+
+//
+// Vendor
+// --------------------------------------------------
+
+
+//
+// Print
+// --------------------------------------------------
+@import "base/print";

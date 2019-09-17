@@ -1,0 +1,45 @@
+/*
+----------------------
+ADMISSIONS AID
+----------------------
+*/
+
+//DEADLINES
+.view-deadline {
+  #edit-date-wrapper {
+    display: none;
+  }
+  .date-padding {
+    display: none;
+  }
+  .entity-deadline {
+    margin: 0;
+  }
+  .views-exposed-form .views-exposed-widget {
+    margin: 0 10px 0 0;
+    padding: 0;
+    button {
+      margin: 0;
+      background-color: #3676bb;
+    }
+  }
+  .deadline-title {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;    
+  }
+  p {
+    margin-top: 5px;
+  }
+}
+
+// DEADLINES SIDEBAR
+.block-views-deadline-student-type-block {
+  .view-deadline {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+  }
+  .views-field-field-deadline-student-type {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,73 @@
+body {
+	font-family: $sans-serif;
+	line-height: 1.4;
+	color: #333;
+}
+
+h1, h2, h3, h4 {
+	font-family: $serif;
+	font-weight: 300;
+	margin-bottom: 0;
+	margin-top: 40px;
+}
+
+h1 {
+	font-size: 36px;
+	color: $black;
+}
+	
+h2 {
+	font-size: 30px;
+	color: $black;
+}
+
+h3 {
+	font-size: 24px;
+	color: $black;
+}
+
+h4 {
+	font-size: 20px;
+	color: #333;
+}
+
+p, li {
+	font-size: 15px;
+	color: #333;
+}
+
+a {
+	 color: #3676bb;
+	 text-decoration: none;
+}
+
+
+blockquote {
+  background: #e5e5e5;
+  margin: 0;
+  padding: 30px;
+  font-size: 24px;
+  font-weight: 100;
+  p {
+    font-weight: 100;
+    font-family: $serif;
+    margin: 0;
+    font-size: 24px;
+    color: #333;    
+    font-style: italic;
+  }
+}
+
+
+.title-link {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+// Used mostly for author names, dates, and times
+.thin-gray-italic {
+  font-size: 15px;
+  font-weight: 100;
+  font-style: italic;
+  color: #666;
+}

@@ -1,0 +1,85 @@
+/*
+----------------------
+NEWS DETAIL
+----------------------
+*/
+.news-detail {
+  margin-top: -20px;
+  .news-image-section {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+    clear: both;
+    .field-name-field-news-image-caption {
+      padding-top: 2px;
+    }
+  }
+}
+
+.news-body {
+  clear: both;
+  .body p {
+    margin: 20px 0;
+  }
+}
+
+.news-title {
+  margin: 0;
+  padding: 0;
+  float: left;
+  padding-right: 10px;
+  border-right: 1px solid #666;
+  font-size: 14px;
+  .field-name-field-news-date {
+    padding: 0;
+    margin: 0;
+  }
+  span {
+    color: #666;
+    font-size: 14px;
+  }
+}
+
+.news-author {
+  margin: 0;
+  padding: 0 0 0 10px;
+  color: #666;
+  float: left;  
+  font-size: 14px;
+  .field-name-field-news-author {
+    float: right;
+    font-weight: 600;
+    padding-left: 5px;
+  }
+}
+
+//news category
+.view-gmu-news-by-category  {
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+// RELATDED NEWS AECTION
+.related-news-block {
+  margin-top: 40px;
+}
+
+.view-related-news {
+  margin-left: -20px;
+  margin-right: -20px;
+  > div > div {
+    @include grid-columns(12,4);
+  } 
+  p {
+    margin: 10px 0;
+  }
+  p a {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  i {
+    color: #666;
+  }
+}

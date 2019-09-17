@@ -1,0 +1,51 @@
+/*
+-------------------
+defualt table styles
+-------------------
+*/
+table {
+    border: 1px solid #cccccc;
+    padding: 10px 5px 5px 5px;      
+}
+
+th{
+	h4{
+		color: #fff;
+		margin:0;
+	}
+}
+
+thead {
+  background: #920710;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 0px;   
+  th {
+    padding: 10px 15px;
+  }
+  &:not-last-child {
+    border-right: 1px solid #cccccc;
+  }
+}
+
+tbody tr th {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ccc;
+  border-right: 2px solid #ccc;
+  background: #595959;
+  color: $white;
+}
+
+td {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+tbody tr td:not(:last-child) {
+    border-right: 1px solid #cccccc;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f0f0f0;
+}

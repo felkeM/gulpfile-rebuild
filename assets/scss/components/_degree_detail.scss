@@ -1,0 +1,939 @@
+// STYLES NOT SPECIFIC TO JUST ONE SECTION ON PAGE
+
+// Lists underneath 'Core Requirements'
+// and 'Career Outcomes'
+.course-numbers,
+.course-names,
+.possible-careers,
+.where-grads-work {
+  list-style-type: none;
+  float: left;
+  margin: 0px;
+
+  li {
+    // Apply bottom margin to all li's
+    // except for the last one
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+// CONCENTRATIONS
+.field-name-field-degree-concentrat-title {
+  font-size: 23px;
+  display: block;
+  color: white;
+  background: $sea-blue;
+  padding: 10px 15px;
+  margin: 20px auto 35px;
+}
+
+// Info text and images in each section
+.field-name-field-degree-concentrat-text {
+  img {
+    float: left;
+    margin: 0px 40px 30px 0px;
+  }
+
+  h3 {
+    color: $brick-red;
+    margin: auto;
+  }
+}
+
+// THE GMERCYU DIFFERENCE
+.field-name-field-degree-gmu-difference {
+  margin-top: 15px;
+
+  span {
+    font-size: 14px;
+  }
+  blockquote {
+    background: #e5e5e5;
+    margin: 0;
+    padding: 30px;
+    p {
+      margin: 0;
+    }
+    span {
+      font-size: 24px;
+      font-style: italic;
+    }
+  }
+}
+
+// CURRICULUM & CONCENTRATIONS
+.curriculum-concentrations {
+  width: 100%;
+  padding-bottom: 40px;
+  float: left;
+  > div {
+    @media #{$medium-up} {
+      float: left;
+      padding-right: 40px;
+    }
+  }
+  .degree-curriculum  {
+  	width: 70%;
+    padding-right: 40px;
+  }
+  .degree-concentrations{
+  	width: 30%;
+  }
+  .degree-faculty{
+  	width: 50%;
+  }
+  h4 {
+    margin-top: 20px;
+    color: #333333;
+  }
+  p {
+    color: #333333;
+    margin-bottom: 0px;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+  .field-name-field-degree-curriculum-courses p span, .field-name-field-degree-concentrat-courses p span {
+    width: 100px;
+    display: inline-block;
+  }
+  .field-name-field-degree-curriculum-courses p em {
+    font-size: 13px;
+    display: block;
+  }
+  .field-name-field-degree-curriculum-courses p strong {
+    display: block;
+    padding-top: 10px;
+  }
+  .field-name-field-degree-curriculum-courses {
+    p:last-child {
+      font-size: 13px;
+      margin-top: 10px;
+    }
+  }
+}
+
+// INTERNSHIP & TRANSFER OPPORTUNITIES
+.field-name-field-degree-sections {
+  clear: both;
+  margin-bottom: 35px;
+
+.field-items > .field-item:not(:first-child) {
+  margin-top: 45px;
+}
+
+  h3 {
+    margin: 0px 0px 15px 0px;
+  }
+
+  span {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+// OUR UNDERSTANDING FACULTY
+.degree-faculty {
+  width: 100%;
+  clear: both;
+  margin-bottom: 56px;
+  float: left;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  > div {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .person-grid {
+    @include grid-columns(12,6,4);
+    margin: 20px 0;
+  }
+  .faculty-link {
+    clear: both;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 20px;
+    a {
+      text-decoration: underline;
+      &:after {
+        content: $arquo;
+        width: 10px;
+        text-align: right;
+
+      }
+    }
+  }
+}
+
+// CAREER OUTCOMES
+.degree-detail__careers, .field-name-field-degree-employers {
+  clear: both;
+  width: 100%;
+  float: left;
+  .field-item {
+    @media #{$medium-up} {
+      width: 50%;
+      float: left;
+    }
+  }
+  .field-item.odd {
+    @media #{$medium-up} {
+      padding-right: 20px;
+    }
+  }
+}
+.field-name-field-degree-employers {
+.field-item.odd {
+    @media #{$small-only} {
+      margin-bottom: 40px;
+    }
+  }
+}
+.view-id-degree {
+  width: 100%;
+  clear: both;
+
+  .views-field-field-degree-header-video {
+    .responsive-video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    /* !important has to be used to override what gets put inline via the ensemble embed code */
+    .jwplayer {
+      width: 100% !important;
+    }
+    .ensembleContentContainer {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+.views-field-field-degree-career-outcomes {
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    &:first-of-type {
+      font-size: 15px;
+      color: $black;
+    }
+  }
+
+  blockquote {
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+
+  .views-field-field-program-careers {
+    float: left;
+  }
+
+  .possible-careers,
+  .where-grads-work {
+    padding: 0px;
+  }
+
+  .views-field-field-program-employers {
+    .medium-6 {
+      &:first-child {
+        margin-left: -20px;
+      }
+
+      &:last-child {
+        margin-right: -20px;
+      }
+    }
+  }
+}
+
+.views-field-field-program-careers {
+  @media only screen and (min-width: 768px) {
+  @include grid-column(4);
+  margin-left: -20px;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+}
+
+.views-field-field-program-employers-title {
+  @media only screen and (min-width: 769px) {
+    width: calc(66.66666% + 20px);
+    float: left;
+  }
+}
+
+.employers-wrapper {
+  clear: both;
+  float: left;
+  width: 100%;
+  @media #{$medium-up} {
+    padding: 0;
+  }
+
+  h4 {
+    @media only screen and (max-width: 768px) {
+      margin-top: 60px;
+      clear: both;
+    }
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .item-list ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .item-list ul li {
+    list-style: none;
+    @include grid-columns(12,6);
+    padding-left: 0px;
+    margin: 0;
+  }
+  .item-list ul li.first {
+    padding-left: 0;
+  }
+}
+
+
+// RELATED DEGREES
+.block-views-related-degrees-block {
+  margin-left: -20px;
+  width: calc(100% + 60px);
+  text-align: center;
+
+  .block-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .view-content {
+    position: relative;
+
+    .views-row {
+      position: relative;
+      width: 230px;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 20px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    span a {
+      font-size: 18px;
+      text-transform: uppercase;
+      bottom: 10px;
+      left: 20px;
+      font-weight: 600;
+      margin-top: 20px;
+      display: block;
+    }
+  }
+}
+
+// SIDEBAR
+
+.major-year {
+  color: #999;
+  font-style: italic;
+}
+
+.sidebar-links {
+  font-size: 16px;
+  margin-top: 30px;
+
+  div:not(:first-child) {
+    background-image: none;
+  }
+
+  // Takes the top border away from the 2nd link onward
+  // so borders don't overlap
+  div:nth-child(n+3) {
+    a {
+      border-top: 0;
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: #3676bb;
+    border: none;
+    padding: 0px;
+  }
+}
+
+// UPCOMING DEADLINES
+// (spacing isn't totally right for this section)
+.sidebar-events {
+  margin: 20px auto;
+  margin-bottom: 40px;
+
+  .date-block {
+    float: left;
+    width: 60px;
+  }
+  .date-desc {
+    width: calc(100% - 60px);
+    float: left;
+    h4 {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: $sans-serif;
+      margin-top: 0px;
+      color: #3676bb;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: #3a3a3a;
+    font-weight: normal;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+
+
+  .view-deadline {
+    border: 1px solid #ccc;
+  }
+
+  .views-row {
+    padding: 0 20px;
+    border-bottom: 1px solid #ccc;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .more-link {
+    padding: 17px;
+    text-align: left;
+
+  }
+}
+
+// Form Assembly CTA
+.block-gmu-fa-request-info {
+  margin: 20px 0 40px 0;
+}
+
+// School of Business - Accounting
+.block-boxes-gmu-learn-more-accounting {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_accounting {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Important Information Block
+.block-boxes-gmu-important-info-block {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_important_info_block {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Jet Spring Mobile block
+.block-boxes-gmu-jetspring-live-chat-mobile{
+  margin-top:60px;
+
+  @media #{$small-only} {
+    display:inline-block;
+    visibility:visible;
+  }
+  @media #{$medium-up} {
+    display:none;
+    visibility:hidden;
+  }
+}
+
+// What do Nurses Do?
+.block-boxes-gmu-learn-more-bsn-page, .block-boxes-gmu-learn-more-bs-degree-respira, .block-boxes-gmu-learn-more-as-degree-respira, .block-boxes-gmu-learn-more-cj, .block-boxes-gmu-learn-more-what-kind-nurse, .block-boxes-gmu-learn-more-nursing-types, .block-boxes-gmu-learn-more-career-in-finance, .block-boxes-gmu-learn-more-social-work, .block-boxes-gmu-learn-more-what-nurses-do, .block-boxes-gmu-learn-more-absn, .block-boxes-gmu-learn-more-grad-nur, .block-boxes-gmu-learn-more-what-biology, .block-boxes-gmu-learn-more-occupational-ther, .block-boxes-gmu-learn-more-ece, .block-boxes-gmu-learn-more-radiation-ther, .block-boxes-gmu-learn-more-sports-management{
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_bsn_page, #boxes-box-gmu_learn_more_bs_degree_respira, #boxes-box-gmu_learn_more_as_degree_respira, #boxes-box-gmu_learn_more_cj, #boxes-box-gmu_learn_more_what_kind_nurse, #boxes-box-gmu_learn_more_nursing_types, #boxes-box-gmu_learn_more_career_in_finance, #boxes-box-gmu_learn_more_social_work, #boxes-box-gmu_learn_more_what_nurses_do, #boxes-box-gmu_learn_more_absn, #boxes-box-gmu_learn_more_grad_nur, #boxes-box-gmu_learn_more_what_biology, #boxes-box-gmu_learn_more_occupational_ther, #boxes-box-gmu_learn_more_ece, #boxes-box-gmu_learn_more_radiation_ther, #boxes-box-gmu_learn_more_sports_management{
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// How to Become a Teacher?
+.block-boxes-gmu-learn-more-become-teacher {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_become_teacher {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Careers in Education
+.block-boxes-gmu-learn-more-careers-education {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_careers_education {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Demand Special Ed Teachers
+.block-boxes-gmu-learn-more-demand-speced {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_demand_speced {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// CONTACT AN ADMISSIONS OFFICER
+.block-boxes-contact-admissions {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-contact_admissions {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+// Schedule an Admissions Appointment for Online
+.block-boxes-schedule-an-ad-appointment {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-schedule_an_ad_appointment {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Schedule an Admissions Appointment for Grad
+.block-boxes-grad-schedule-appointment {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-grad_schedule_appointment {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Schedule an Admissions Appointment for ABSN
+.block-boxes-absn-schedule-appointment {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-absn_schedule_appointment {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Learn More How to Become a Nurse Practitioner
+.block-boxes-gmu-learn-more-become-nurse {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_become_nurse {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Learn More What Does a Nurse Practitioner Do?
+.block-boxes-gmu-learn-more-does-nurse-preact {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_does_nurse_preact {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Learn More How to be a Teacher
+.block-boxes-gmu-learn-more-kind-teacher {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_kind_teacher {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Learn More about Nurse Educator
+.block-boxes-gmu-learn-more-nurse-edu {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_nurse_edu {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Learn More about Clinical Nurse Specialist
+.block-boxes-gmu-learn-more-clinical-nurse {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_clinical_nurse {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Learn More about Criminal Justice
+.block-boxes-gmu-learn-more-criminal-justice {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_criminal_justice {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// Learn More about Respiratory Therapist
+.block-boxes-gmu-learn-more-respiratory {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_respiratory {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// CIS Learn More
+.block-boxes-gmu-learn-more-cis {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  #boxes-box-gmu_learn_more_cis {
+    padding: 20px;
+  }
+
+  .block-title {
+    font-size: 18px;
+    margin-top: 0px;
+    font-family: $sans-serif;
+    font-weight: 600;
+  }
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+// RELATED STUDENT ORGANIZATIONS
+.student-org {
+  margin: 20px 0;
+  margin-bottom: 40px;
+
+  .block-title {
+    font-size: 16px;
+    background: #545353;
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: $sans-serif;
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  // Everything under the section-header-block
+  .view-content {
+    border: 1px solid #ccc;
+  }
+
+  // Each student organization block
+  .views-row {
+    padding: 20px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}
+
+// STUDENT SUCCESS
+.sidebar .student-success {
+  .field-name-field-student-story-image {
+    padding: 20px 20px 0;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+
+  .views-row {
+    padding: 0;
+    border: none;
+  }
+  .story-content {
+    padding: 20px 20px 10px;
+    border: 1px solid #ccc;
+    border-top: 0;
+  }
+}
+.student-success {
+  margin: 20px auto;
+  margin-bottom: 40px;
+
+  .block-title {
+    margin-top: 0;
+  }
+  .medium-4 {
+    width: 100%;
+    padding: 0;
+  }
+  p {
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  .title-link {
+    margin-top: 20px;
+  }
+}
+
+// Live Chat
+.block-boxes-synergis-live-chat-online{
+	#boxes-box-synergis_live_chat_online{
+		margin-bottom:20px;
+	}
+}
+
+.block-boxes-synergis-live-chat-grad{
+	#boxes-box-synergis_live_chat_grad{
+		margin-bottom:20px;
+	}
+}

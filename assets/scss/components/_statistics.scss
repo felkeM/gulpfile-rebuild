@@ -1,0 +1,54 @@
+// STATISTICS
+.field-name-field-landing-statistics {
+	margin: 35px auto;
+	float: left;
+	width: 100%;
+
+	> .field-items > .field-item {
+  	@media #{$small-only} {
+    	margin-top: 30px;
+    	float: left; width: 100%;
+    	&:first-child {
+      	margin-top: 0px;
+      }
+    }
+		@media #{$medium-up} {
+  	  .medium-4 {
+    	  border-left: 1px solid #ccc;
+      }
+
+  		&:last-child {
+    		.medium-4 {
+    			border-right: 1px solid #ccc;
+  			}
+  		}
+    }
+	}
+
+	.medium-4 {
+		text-align: center;
+		line-height: 1.2;
+		min-height: 200px;
+	}
+}
+
+// Statistic
+.field-name-field-statistic-value {
+	font-size: 58px;
+	color: #336666;
+	font-weight: 100;
+}
+
+// Statistic description
+.field-name-field-statistic-description {
+	p {
+		font-size: 20px;
+		color: #545353;
+		margin: 0;
+// 		padding: 0 20px;
+
+		&:first-child {
+			font-size: 20px;
+		}
+	}
+}

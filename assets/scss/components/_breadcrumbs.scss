@@ -1,0 +1,115 @@
+//
+// OHO Foundation Breadcrumb Mixins
+//
+
+//
+// Breadcrumb Variables
+//
+
+// We use this to set the background color for the breadcrumb container.
+$crumb-bg: scale-color($secondary-color, $lightness: 55%) !default;
+
+// We use these to set the padding around the breadcrumbs.
+$crumb-padding: rem-calc(9 0);
+$crumb-side-padding: rem-calc(5);
+
+// We use these to control border styles.
+$crumb-function-factor: -10% !default;
+$crumb-border-size: 1px !default;
+$crumb-border-style: solid !default;
+$crumb-border-color: scale-color($crumb-bg, $lightness: $crumb-function-factor) !default;
+$crumb-radius: $global-radius !default;
+
+// We use these to set various text styles for breadcrumbs.
+$crumb-font-size: rem-calc(14);
+$crumb-font-color: $primary-color !default;
+$crumb-font-color-current: #333 !default;
+$crumb-font-color-unavailable: #999 !default;
+$crumb-font-transform: uppercase !default;
+$crumb-link-decor: underline !default;
+
+// We use these to control the slash between breadcrumbs
+$crumb-slash-color: #000 ;
+$crumb-slash: ">" !default;
+
+//
+// Breadcrumb Mixins
+//
+
+// We use this mixin to create a container around our breadcrumbs
+@mixin oho-crumb-container {
+  display: block;
+  padding: $crumb-padding;
+  overflow: hidden;
+  margin: 30px 0 0px 20px; // Added 20px of left margin to line up with padded page content
+  list-style: none;
+}
+
+// We use this mixin to create breadcrumb styles from list items.
+@mixin oho-crumbs {
+
+  // A normal state will make the links look and act like clickable breadcrumbs.
+  margin: 0;
+  float: $default-float;
+  font-size: $crumb-font-size;
+
+  a:hover, a:focus { text-decoration: $crumb-link-decor; }
+
+  a,
+  span {
+    color: $link-blue;
+  }
+
+  // Current is for the link of the current page
+  &.current {
+    cursor: $cursor-default-value;
+    color: $crumb-font-color-current;
+    a {
+      cursor: $cursor-default-value;
+      color: $crumb-font-color-current;
+    }
+
+    &:hover, &:hover a,
+    &:focus, &:focus a { text-decoration: none; }
+  }
+
+  // Unavailable removed color and link styles so it looks inactive.
+  &.unavailable {
+    color: $crumb-font-color-unavailable;
+    a { color: $crumb-font-color-unavailable; }
+
+    &:hover,
+    &:hover a,
+    &:focus,
+    a:focus {
+      text-decoration: none;
+      color: $crumb-font-color-unavailable;
+      cursor: $cursor-default-value;
+    }
+  }
+
+  &:before {
+    content: "#{$crumb-slash}";
+    color: $crumb-slash-color;
+    margin: 0 $crumb-side-padding;
+  }
+
+  &:first-child:before {
+    content: " ";
+    margin: 0;
+  }
+}
+
+.breadcrumbs {
+  @include oho-crumb-container;
+
+  &>* {
+    @include oho-crumbs;
+  }
+}
+
+#main .breadcrumbs {
+  clear: both;
+  float: left;
+  margin-top: 10px;
+}

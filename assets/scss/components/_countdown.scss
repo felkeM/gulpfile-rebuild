@@ -1,0 +1,187 @@
+$clock-color: #920710;
+
+$clock-font-size: 50px;
+$clock-height: $clock-font-size * 1.2;
+$clock-gap: 8px;
+$clock-margin: 20px;
+$clock-radius: 10px;
+$clock-dot-size: 12px;
+
+$clock-mobile-font-size: 30px;
+$clock-mobile-height: $clock-mobile-font-size * 1.2;
+$clock-mobile-gap: 5px;
+$clock-mobile-margin: 15px;
+$clock-mobile-radius: 6px;
+$clock-mobile-dot-size: 6px;
+
+.clock-align{
+	position:relative;
+	display:inline-block;
+	width:100%;	
+}
+
+@media only screen and (max-width: 810px) {
+
+	.clock-align{
+		position:relative;
+		display:inline-block;
+		width:150px;	
+	}
+
+}
+
+
+/* -- */
+.clock-align{
+	
+	.flip-clock-wrapper{
+		padding: 0;
+		margin: 30px 0 0 0;
+		
+		ul {
+			height: $clock-mobile-height;
+			width: $clock-mobile-font-size * 0.8;
+			margin: 0 ($clock-mobile-gap / 2);
+			border-radius: $clock-mobile-radius;
+		
+			li{
+				line-height: $clock-mobile-height;
+			
+				div.inn{
+					background-color: $clock-color;
+					font-size: $clock-mobile-font-size;
+					border-radius: $clock-mobile-radius;
+				}
+			
+				div.down{
+					border-bottom-left-radius: $clock-mobile-radius;
+					border-bottom-right-radius: $clock-mobile-radius;
+				}
+			
+				div.up:after{
+					top: (($clock-mobile-height / 2) - 1px);
+				}
+			}
+		}
+		.flip-clock-dot{
+			background: $clock-color;
+		}
+		
+		/* -- moblie start -- */
+		
+		.flip-clock-dot.top{
+			top: ($clock-mobile-height / 2 - $clock-mobile-font-size * 0.2 - $clock-mobile-dot-size / 2);
+		}
+		.flip-clock-dot.bottom{
+			top: ($clock-mobile-height / 2 + $clock-mobile-font-size * 0.2 - $clock-mobile-dot-size / 2);
+		}
+		.flip-clock-dot{
+			width: $clock-mobile-dot-size;
+			height: $clock-mobile-dot-size;
+			left: $clock-mobile-dot-size;
+		}
+		.flip-clock-divider {
+			width: ($clock-mobile-dot-size * 3);
+			height: 100px;
+		
+			&:first-child{
+				width:0;
+			}
+
+			&.days .flip-clock-label{
+				right:-59px;
+			}
+			
+			&.hours .flip-clock-label{
+				top: 83px;
+				right:46px;
+			}
+			
+			&.minutes .flip-clock-label{
+				top: 83px;
+				right:40px;
+			}
+			
+			&.seconds .flip-clock-label{
+				top: 83px;
+				right:39px;
+			}
+		
+			.flip-clock-label{
+				font-size: 12px;
+			}
+		}
+		
+		/* -- moblie end -- */
+		
+		@media only screen and (min-width: 810px) {
+			ul {
+				height: $clock-height;
+				width: $clock-font-size * 0.8;
+				margin: 0 ($clock-gap / 2);
+				border-radius: $clock-radius;
+		
+				li{
+					line-height: $clock-height;
+			
+					div.inn{
+						font-size: $clock-font-size;
+						border-radius: $clock-radius;
+					}
+			
+					div.down{
+						border-bottom-left-radius: $clock-radius;
+						border-bottom-right-radius: $clock-radius;
+					}
+			
+					div.up:after{
+						top: (($clock-height / 2) - 1px);
+					}
+				}
+			}
+			.flip-clock-dot.top{
+				top: ($clock-height / 2 - $clock-font-size * 0.2 - $clock-dot-size / 2);
+			}
+			.flip-clock-dot.bottom{
+				top: ($clock-height / 2 + $clock-font-size * 0.2 - $clock-dot-size / 2);
+			}
+			.flip-clock-dot{
+				width: $clock-dot-size;
+				height: $clock-dot-size;
+				left: $clock-dot-size;
+			}
+			.flip-clock-divider {
+				width: ($clock-dot-size * 3);
+				height: 50px;
+		
+				&:first-child{
+					width:0;
+				}
+				
+				&.days .flip-clock-label{
+					top: -1.5em;
+					right:-65px;
+				}
+				
+				&.hours .flip-clock-label{
+					top: -1.5em;
+					right:-68px;
+				}
+				
+				&.minutes .flip-clock-label{
+					top: -1.5em;
+					right:-75px;
+				}
+				
+				&.seconds .flip-clock-label{
+					top: -1.5em;
+					right:-78px;
+				}
+		
+				.flip-clock-label{
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

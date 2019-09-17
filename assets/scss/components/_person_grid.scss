@@ -1,0 +1,147 @@
+/*
+---------------------
+FACULTY LIST - SUCCESS STORIES - DIRECTORY
+---------------------
+*/
+
+.view-faculty-listing-block, .view-student-story-listing, .view-display-id-news_listing_page, .view-contact-information-listing-block {
+  .views-exposed-form .views-exposed-widget .form-submit {
+    margin: 0;
+    background-color: #3676bb;
+  }
+  .views-exposed-form .views-exposed-widget {
+    padding: 0;
+  }
+  .views-widget-filter-title {
+    @media #{$small-only} {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#glossary {
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	margin: 20px auto 35px auto;
+	padding: 15px 0;
+	width: 100%;
+
+	span {
+		margin-left: 25px;
+		display: inline-block;
+	}
+}
+
+.view-student-story-listing.view-display-id-student_story_listing_block {
+  #glossary {
+  	margin-top: 5px;
+  }
+}
+
+.currently-filtered {
+	color: $brick-red;
+	font-weight: bold;
+}
+
+.grid-status {
+	margin-bottom: 35px;
+	font-style: italic;
+
+	span {
+		color: $brick-red;
+		font-style: normal;
+		font-weight: bold;
+	}
+}
+
+.person-grid {
+// 	float: left;
+}
+
+// Person tile
+.view-id-faculty_listing_block .view-content {
+  margin-left: -20px;
+  margin-right: -20px;
+
+}
+
+.pagination-centered .item-list .pager {
+  clear: both;
+  padding: 0;
+}
+
+
+.view-id-faculty_listing_block .view-content > div, .field-name-field-school-featured-faculty, .view-student-story-listing .view-content > div, .view-contact-information-listing-block > div > div {
+  @media #{$large-up} {
+    width: 24%;
+  }
+   @media #{$medium-only} {
+    width: 31%;
+  }
+  padding: 0 20px 40px;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+}
+	.field-name-field-faculty-image {
+/*
+		width: 200px;
+		height: 200px;
+*/
+		overflow: hidden;
+	}
+
+	.person-image {
+		width: 100%;
+	}
+
+	.person-name {
+		display: block;
+		font-size: 18px;
+		font-weight: 600;
+		margin-top: 15px;
+	}
+
+	.person-title, .field-name-field-contact-university-title  {
+		display: block;
+		font-style: italic;
+		ul {
+  		margin: 0;
+  		padding: 0;
+  		li {
+    		list-style-type: none;
+  		}
+		}
+	}
+
+// UNIQUE STUDENT STORY SPACING
+
+.view-student-story-listing {
+  .person-title {
+    margin-bottom: 11px;
+    margin-top: 8px;
+    color: #666666;
+  }
+  p {
+    color: 333333;
+    font-weight: 600;
+  }
+}
+
+// DIRECTORY
+
+#edit-contact-type{
+  > div {
+    display: inline-block;
+    padding: 0 10px 0 0;
+  }
+  input {
+    margin-top: -5px;
+  }
+}
+
+.view-contact-information-listing-block .pagination-centered {
+  .item-list {
+    width: 100%;
+  }
+}

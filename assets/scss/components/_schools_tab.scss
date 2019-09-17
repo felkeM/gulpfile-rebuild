@@ -1,0 +1,155 @@
+.tab-container {
+  min-height: 340px;
+  border: 5px solid #025150;
+  border-top: none;
+  margin-bottom: 25px;
+  float: left;
+  width: 100%;
+  background: #f5f5f5;
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px auto;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    
+    span {
+      color: #666;
+    }
+  }
+  
+  .view-school-degree .view-content > .view-grouping, .view-school-degree-test .view-content > .view-grouping {
+    @media #{$medium-up} {
+      @include grid-columns(12,6);
+      padding: 0 15px;
+      &:first-child {
+        padding-left: 30px;
+      }
+      &:last-child {
+        padding-right: 30px;
+      }
+    }
+    h3 {
+      font-size: 16px;
+      font-family: $sans-serif;
+      font-weight: 600;
+      margin-top: 15px;
+      color: #666;
+    }
+    a {
+      color: #3676bb;
+      font-size: 16px;
+    }
+    .view-grouping .view-grouping-content div > span:nth-child(2) {
+      color: #666;
+    }
+    p {
+      color: #666;
+      font-size: 16px;
+      padding-bottom: 20px;
+      float: left;
+      
+    }
+  }
+  
+  .views-row {
+    width: 100%;
+    float: left;
+    > div {
+      float: left;
+      padding-right: 5px;
+      width: 100%;
+    }
+  }
+  
+  .half {
+    @include grid-column(
+      $columns: 6
+    );
+    
+    margin: 30px;
+    padding: 0;
+  }
+  
+  .view-grouping-header {
+    font-family: $sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .view-grouping .view-grouping .view-grouping-header {
+    font-weight: normal;
+    color: #666;
+  }
+}
+
+.tab-heading {
+  font-size: 18px;
+  
+}
+
+.faculty-content-btn {
+  margin-right: 40px;
+  float: right;
+  margin-left: 0px;
+  @media #{$small-only} {
+    margin-right: 0px;
+    float: none;
+  }
+  
+}
+
+.schools-content-btn {
+  color: #666;
+  font-weight: 100;
+  font-size: 16px;
+  border: 1px solid #666666;
+  padding: 5px 10px;
+  background: $white;
+  margin-left: 20px;
+  display: inline-block;
+  margin-top: 30px;
+  &:after {
+    content: normal;
+  }
+  @media #{$small-only} {
+    margin-left: 0px;
+  }
+}
+
+.school-tabs {
+  .view-footer {
+    float: left;
+    width: 100%;
+    border: 1px solid #ccc;
+    a {
+      color: #3676bb;
+    }
+  }
+  
+  .recent-news .footer-link {
+    margin-top: 20px;
+  }
+  
+  .view-id-featured_events .views-row {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    &:last-child {
+      border-top: none;
+      border-bottom: none;
+    }
+  }
+  .upcoming-events {
+   > .title {
+      background: #545353;
+      padding: 10px;      
+      font-weight: 500;
+      color: $white;
+    }
+  }
+}

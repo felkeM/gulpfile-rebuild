@@ -1,0 +1,98 @@
+// LANDING PAGE CALLOUTS
+.landing-page-callouts {
+  // Section heading
+  .field-name-field-landing-pc-title {
+  	text-align: center;
+  	margin: 50px auto;
+  }
+  
+  .field-name-field-landing-page-callouts {
+    margin-left: rem-calc(-20);
+    margin-right: rem-calc(-20);
+    > div > div {
+      @include grid-columns(12,6,3);
+    }
+  }
+  
+  .page-callouts {	
+  
+  	// Block headings
+  	.field-name-field-callouts-title {
+  		font-size: 22px;
+  		font-weight: 600;
+  		text-transform: uppercase;
+  		padding-bottom: 10px;
+  		display:none;
+  		visibility:hidden;
+  	}
+  	
+  	// Block links
+  	.field-name-field-callouts-link {
+  		font-size: 18px;
+  		margin: 20px 0 10px;
+  	}
+  	
+  	@media #{$small-only} {
+    	text-align: center;
+  	}
+  }
+}
+
+// BASIC PAGE PAGE CALLOUTS
+.field-collection-container .field-name-field-page-callouts > .field-items > div {
+  margin-bottom: 40px;
+}
+
+.field-name-field-page-callouts {
+  margin-left: rem-calc(-20);
+  margin-right: rem-calc(-20);
+  padding: 40px 0;
+
+  > .field-items > div {
+    position: relative;
+    width: 226px;
+    display: inline-block;
+    margin: 0 20px;
+    margin-bottom: 40px;
+    text-align: left;
+    vertical-align: top; 
+  }
+  .callout-url {
+    position: relative;
+    background: $black;
+    img {
+      opacity: .5;
+    }
+  }
+  .callout-content {
+    position: relative;
+    padding: 20px;
+    background: #e5e5e5;
+    a {
+      font-weight: 600;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 7px;
+    }
+  }
+  .field-name-field-page-callout-title {
+    position: absolute;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    bottom: 10px;
+    left: 15px;
+    font-weight: 100;    
+    width: 195px;
+  }
+}
+.field-name-field-callouts-title {
+    position: absolute;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    bottom: 10px;
+    left: 20px;
+    font-weight: 100;    
+    width: 210px;
+  }

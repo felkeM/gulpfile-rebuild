@@ -1,0 +1,527 @@
+// CTA BANNER PRIMARY
+
+.field-name-field-interest-panels-block {
+	background: $brick-red;
+	width: calc(100% + 40px);
+	margin-left: -20px;
+	color: $white;
+	padding-top: 40px;
+	float: left;
+	@media #{$large-up} {
+  	margin-left: -50%;
+    width: 200%;
+	}
+	.story-content .field-name-field-student-story-quote {
+  	color: #666;
+  	padding-bottom: 15px;
+	}
+}
+
+.panel-row {
+  @media #{$large-up} {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+// container for header and buttons
+.interest-panel {
+  text-align: center;
+  float: left;
+  width: 100%;
+
+  
+  h1 {
+		margin: 0;
+		color: #fefefe;
+	}
+ 
+  // button container
+  .cta-button-container {
+    margin: 45px 0 60px 0;
+	
+    // styles for each button
+    .program {
+  		display: inline-block;
+  		> a {
+    		border: 1px $black solid;
+      	color: $black;
+      	background-color: $white;
+      	padding: 10px 30px;
+      	border-radius: 9px;
+      	margin: 5px 10px;
+      	line-height: 1;
+      	display: block;
+  		}
+    }
+  	> a {
+  		display: inline-block;
+  		border: 1px $black solid;
+    	color: $black;
+    	background-color: $white;
+    	padding: 10px 30px;
+    	border-radius: 9px;
+    	margin: 5px 10px;
+    	line-height: 1;
+  	}
+  	a.active, .landing-btn-active {
+    	background-color: #006867 !important;
+    	color: $white !important;
+  	}
+  }
+  
+  // link underneath buttons
+  span {
+    font-weight: 100
+  }
+  
+	span a {
+		color: #81ced0;
+		font-weight: normal;
+	}
+}
+
+// CTA BANNER SECONDARY
+.cta_banner_secondary {
+  	@media #{$large-up} {
+   	margin-left: -50%;
+    width: 200%;
+    margin-bottom: 40px;
+	}
+	width: calc(100% + 40px);
+	margin-left: -20px;
+  
+	background: $sea-blue;
+	color: $white;
+	text-align: center;
+	padding: 15px 20px;;
+	border-top: 1px solid $white;
+	float: left;
+	margin-bottom: 40px;
+	
+	// Heading
+	.field-name-field-landing-cta-title {
+		font-size: 33px;
+		display: inline-block;
+		margin: auto 15px;
+	}
+	
+	// Links
+	.field-name-field-landing-cta-links {
+		display: inline-block;
+		
+		// Link container
+		.field-item {
+			display: inline-block;
+			margin: 5px;
+			
+		}
+		
+		a {
+			display: inline-block;
+			font-size: 20px;
+			color: #666;
+			padding: 10px;
+			border: 1px solid #9c9595;
+			background: $white;
+			font-weight: 100;
+		}
+		
+		// wider button for 2 words
+		.btn-220 a {
+			width: 220px;
+		}
+		
+		// smaller button for 1 word
+		.btn-170 a {
+			width: 170px;
+		}
+	}
+}
+
+// INTEREST PANELS
+
+.downward-triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  margin: 0 auto;
+}
+
+.interest-panel {
+  @media #{$large-up} {
+    padding: 0 0 55px 0;
+  }
+  
+  padding: 0 20px 55px 20px;
+
+  h1 {
+    margin: 30px 0;      
+  }
+}
+
+.interest-panel:nth-child(odd) {
+  .downward-triangle {
+    border-top: 30px solid #eeeeee;  
+  }  
+}
+
+.interest-panel:nth-child(even) {
+  background-color: #eeeeee;
+  h1 {
+    color: $black;
+  }
+  p a {
+    padding-left: 5px;
+  }    
+  .downward-triangle {
+    border-top: 30px solid $brick-red;  
+  }
+}
+
+.four-column-display {
+  .taxonomy-term-description {
+    display: none;
+  }
+  padding: 0 30px;
+  .banner-careers {
+    @include grid-columns(12,4,4);
+    text-align: left;
+    
+    @media #{$medium-up} {
+      border-right: 1px solid white;
+    }    
+    @media #{$small-only} {
+      padding-bottom: 40px;
+    }
+    h4 {
+      width: 100%;
+      font-size: 24px;
+      font-family: $serif;
+      color: $white;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    p {
+      color: white;
+      margin: 4px 0;
+      
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        margin-left: 0;
+        color: white;
+      }
+    }
+  }
+  .banner-have-worked {
+    @include grid-columns(12,4,4);
+    padding-bottom: 20px;
+    
+    .field-name-field-program-employers-title {
+      text-align: left;
+      .field-item {
+        width: 100%;
+        font-size: 24px;
+        font-family: $serif;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+    }
+    .field-item {
+      * {
+        color: white;
+        text-align: left;
+      }
+    }
+    .field-name-field-program-employers {
+      p {
+        margin: 4px 0;
+      }
+    }
+  }
+  .medium-4 {
+    @include grid-columns (12,4,4);
+  }
+  .recent-news .views-row {
+    background-color: white;
+    padding: 0;
+    border: none;
+  }
+  .story-content {
+    padding: 0px 20px 0px 20px;
+  }
+  img {
+    width: 100%;
+  }
+  .recent-news .footer-link {
+    width: calc(100% + 40px);
+    padding-bottom: 10px;
+  }
+  .more-link {
+    display: block;
+    margin: 20px 0;
+    text-align: left;
+    a {
+      color: #81ced0;
+    }
+  }
+}
+
+.footer-cta {
+  padding-top: 40px;
+  float: left;
+  width: 100%;
+  a {
+    color: #81ced0;
+  }
+}
+
+// INTEREST PANEL ACADEMICS 
+.lower-panel-link {
+  float: left;
+  width: 100%;
+  span {
+    color: #81ced0;
+  }
+}
+
+#interest-panel-academics{
+  .interest-panel-edu-experience {
+    background: #eeeeee;
+    .medium-6 {
+      margin-bottom: 40px;
+    }
+    .lower-panel-link span {
+      color: $link-blue
+    }
+  }
+  .interest-panel:nth-child(odd) .downward-triangle {
+      border-top: 30px solid $brick-red;
+  }
+  .interest-panel-first h1, .interest-panel-third h1 {
+    color: $white;
+  }
+  h1 {
+    color: $black;
+  }  
+  #interest-panel-degree {
+    background: $brick-red;
+    .downward-triangle {
+      border-top: 30px solid #eeeeee;      
+    }
+  }
+}
+.interest-panel {
+  .edu-exp {
+    width: 100%;
+    float: left;
+    clear: both;
+    
+    .cta-button-container {
+      margin: 0;
+      display: inline-block;
+    }
+  }
+  .degree-level-boxed {
+    padding: 20px;
+    border: 2px solid $black;
+  }
+  .degree-level-title {
+    color: $black;
+    font-size: 22px;
+    font-weight: 600;
+    display: block;
+    clear: both;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}
+.interest-panel-third {
+  .cta-button-container {
+    > div {
+      display: inline-block;
+    }
+    a {
+      display: inline-block;
+      border: 1px #000 solid;
+      color: #000;
+      background-color: #fff;
+      padding: 10px 30px;
+      border-radius: 9px;
+      margin: 5px 10px;
+      line-height: 1;      
+    }
+  }
+}
+
+// default interest panel
+#interest-panel-default {
+  .medium-6 {
+    text-align: left;
+    @media #{$small-only} {
+      margin-left: -20px;
+      width: calc(100% + 40px);
+      padding: 30px 20px 10px 20px;
+    }
+  }
+  .stat-column {
+    @media #{$medium-up} {
+      border-right: 1px solid #cccccc;
+    }
+    @media #{$small-only} {
+      border-bottom: 1px solid #cccccc;
+    }
+    h1, h2, h3, h4, h5{
+    	font-family: "proxima-nova", sans-serif;
+    }
+    h2 {
+      width: 100%;
+      text-align: center;
+      padding-right: 0;
+      line-height: 1;      
+      margin-top: 0;
+      margin-bottom: 0;
+      font-weight: 100;
+      font-size: 88px;
+      color: $sea-blue;
+      @media screen and (min-width: 768px) {
+        float: left;
+        width: 190px;     
+        padding-right: 40px;         
+      }
+    }
+    p {
+      width: 100%;
+      margin-top: 0;
+      @media screen and (min-width: 768px) {
+        width: calc(100% - 190px);      
+        float: left;        
+      }
+      @media #{$small-only} {
+        text-align: center;
+      }      
+    }
+  }
+  .img-column {
+    > p {
+      &:first-child {
+        margin: 0 auto;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+          width: 180px;
+          float: left;
+        }        
+      }
+      &:nth-child(2) {
+        margin-top: 0;
+        padding-left: 10px;
+        @media screen and (min-width: 768px) {
+          width: calc(100% - 180px);
+          float: left;
+        }        
+      }
+    }
+  }
+  .lower-panel-link {
+    float: left;
+    color: $black;
+    margin-top: 40px;
+    font-weight: 100;
+    a {
+      font-weight: normal;
+      text-decoration: underline;
+    }
+  }
+}
+.landing-cta-container {
+  .landing-page-callouts .page-callouts {
+    @media #{$small-only} {
+      text-align: left;
+    }
+  }
+  float: left;
+  width: 100%;
+  h3 {
+    margin: 0 0 40px 0;
+    text-align: center;
+    font-size: 30px;
+  }
+  .field-name-field-landing-page-callouts .field-item {
+    margin-bottom: 10px;
+  }
+}
+
+// ADMISSIONS
+#interest-panel-student-type {
+  .lower-panel-link {
+    font-weight: 100;
+    a {
+      font-weight: normal;
+      color: #81ced0;
+      text-decoration: underline;
+    }
+  }  
+}
+
+.next-steps-container {
+  padding-top: 50px; 
+  .student-type {
+    .medium-4 {
+      @media #{$medium-up} {
+        &:nth-child(2) {
+          border-right: 1px solid #ccc;
+          border-left: 1px solid #ccc;
+        }
+      }
+      @media #{$small-only} {
+        padding: 35px 20px 15px;
+        margin-left: -20px;
+        width: calc(100% + 40px);
+        float: none;
+        &:nth-child(2) {
+          border-top: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+        }
+        &:last-child {
+          margin-bottom: -60px;
+        }
+      }      
+    }
+  }
+  h3 {
+    font-size: 26px;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  .step-number {
+    font-size: 42px;
+    font-family: $serif;
+    border-radius: 50%;
+    background-color: $brick-red;
+    font-weight: bold;
+    width: 58px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  p {
+    text-align: left;
+  }
+}
+
+// STUDENT LIFE
+#interest-panel-student-life{
+	#interest-panel-default .stat-column h2{
+		color: $white;
+	}
+
+	.lower-panel-link{
+		color: $white;
+	}
+}

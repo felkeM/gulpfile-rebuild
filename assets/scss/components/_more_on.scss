@@ -1,0 +1,148 @@
+// MORE-ON DROPDOWN AT TOP OF PAGE
+.more-on-padded {
+  padding: 0 20px;
+}
+
+.more-on-dropdown-container {
+	background: #cccccc;
+	padding: 15px 22px 13px 22px;
+	font-size: 18px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+  float: left;
+  clear: both;
+  width: 100%;
+  max-width: 447px;  
+  	
+	@media #{$small-only} {
+    height: auto;
+    float: left;
+    width: 100%;
+    padding-bottom: 20px;
+	}
+  
+  .more-on-label {
+    float: left;
+    margin-right: 12px;
+    font-weight: 600;    
+    span {
+      font-weight: normal;
+    }
+    @media #{$small-only} {
+      float: none;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 10px;
+    }
+  }
+	
+	.more-on-toggle {
+		max-width: 270px;
+		width: 100%;
+		display: inline;
+		float: left;
+		border: 1px solid #ccc;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+		@media #{$small-only} {
+  		display: block;
+  		float: none;
+  		margin: 0 auto;
+		}
+		.more-on-select {
+  		float: left;
+  		background-image: url("../img/more-on-arrow-down.png");
+  		background-repeat: no-repeat;
+      background-position: 95%;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      padding: 3px 0 3px 13px;
+      border-radius: 5px;
+      background-color: $white;
+      
+		}
+
+		.more-on-select-active {
+  		background-image: url("../img/more-on-arrow-up.png");
+  		border-radius: 5px 5px 0px 0px;
+  		background-repeat: no-repeat;
+      background-position: 95%;
+  		
+		}
+		
+		ul {
+  		list-style-type: none;
+  		padding: 0;
+  		top: 12px;
+  		margin-bottom: 0px;
+  		display: none;
+  		position: absolute;
+  		z-index: 1;
+  		width: calc(100% + 2px);
+  		background-color: $white;
+  		margin-left: -1px;
+  		
+  		li {
+        padding: 3px 0 3px 13px;
+        border: 1px solid #ccc;
+        border-top: none;
+        margin: 0;
+        list-style-type: none;
+        
+        &:last-child {
+          border-radius: 0px 0px 5px 5px;
+        }  		
+        a {
+          color: $link-blue;
+        }
+  		}
+		}
+	}
+}
+
+
+// MORE-ON SECTION AT BOTTOM OF PAGE
+.more-on {
+	min-height: 230px;
+	background-color: #eeeeee;
+// 	margin-bottom: 30px;
+	
+	> div {
+		padding-top: 40px;
+		padding-bottom: 15px;
+    font-size: 30px;
+    font-family: $serif;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 75rem;    
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;    
+	}
+	
+	ul {
+  	margin-left: 0;
+  	padding-left: 0px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 75rem;    
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;  	
+	}
+	
+	li {
+		margin-right: 25px;
+		margin-bottom: 20px;
+		display: inline-block;
+		font-size: 14px;
+		a {
+  		color: $link-blue;
+		}
+	}
+}

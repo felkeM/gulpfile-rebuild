@@ -1,0 +1,41 @@
+/*
+---------------
+CONTEXTUAL LINKS OVERRIDES
+---------------
+*/
+
+.contextual-links-region {
+  &:after {
+    clear: both;
+  }
+}
+
+.contextual-links-trigger {
+  padding: 0px 0 0px 35px !important;
+  border: none !important;
+  &:hover {
+    background-color: rgba(0,0,0,0) !important; 
+  }
+}
+
+.button-group {
+  width: 100%;
+  display: block;
+  clear: both;
+  padding-bottom: 30px;
+  padding-left: 0px;
+  &:after {
+    clear: both;
+  }
+  li {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: $brick-red;
+    a {
+      color: white;
+      &:active {
+        color: white;
+      }
+    }
+  }
+}

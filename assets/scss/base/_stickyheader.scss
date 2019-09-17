@@ -1,0 +1,27 @@
+/*
+----------------------------
+STICKY HEADER
+----------------------------
+*/
+.static-header {
+  position: fixed;
+  @media #{$large-up} {
+    position: relative;
+  }
+}
+
+.dynamic-header {
+  position: fixed;
+  top: -155px;
+  transition: $transition;
+  display: none;
+  @media  #{$large-up} {
+    display: block;
+  }
+}
+
+.dynamic-header--active {
+  top: 0;
+  visibility: visible;
+  transition: $transition;  
+}

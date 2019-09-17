@@ -1,0 +1,138 @@
+// SHARE
+.share-links {
+  background: #d3d3d4;
+  color: #3a3a3b;
+  display: block;
+  min-width: 272px;
+  margin: 30px 0px;
+  float: left;
+  clear: both;
+  padding: 7px 3px 5px 15px;
+  
+  .stButton .stLarge {
+    height: 23px;
+    width: 23px;
+    background-size: cover;
+  }
+  
+  & > span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  ul {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    float: right;
+    
+    // Float everything inside the UL to the left
+    & * {
+      float: left;
+    }
+    
+    .sharethis-wrapper span {
+      &:not(:last-child) {
+        padding-right: 13px;
+      }
+    }
+  }
+  
+}
+
+
+// EVENT WRAPPER
+.event-content {
+  width: 100%;
+  clear: both;
+}
+
+// DATE BLOCK
+
+// Container for red date square and info
+.listing-detail-container {
+  .date-block {
+    width: 100%;
+  }
+  .field-name-field-event-image {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .detail-image {
+    margin-bottom: 35px;
+    float: left;
+  }
+}
+.date-block {
+@media #{$small-only} {
+  margin-top: 20px;
+}
+  // Red date square  
+  .field-name-field-event-date {
+    float: left;
+  }
+  
+  // Location and time info
+  .location-time {
+    float: left;
+    margin-left: 20px;
+  }
+}
+
+// EVENT DESCRIPTION
+.event-description {
+  width: 100%;
+  float: left;
+  margin-top: 30px;
+  p {
+    margin-bottom: 30px;
+    font-weight: normal;
+  }
+}
+
+// RELATED EVENTS
+.block-views-related-events-block {
+  .block-title {
+    font-family: $sans-serif;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+  
+  article {
+    padding: 0px;
+    @media #{$small-only} {
+      padding: 20px 0;
+    }
+  }
+}
+
+// ----- SIDEBAR -----
+.sidebar {
+  .block-views-featured-events-block {
+    .views-row {
+      padding: 20px;
+    }
+  }
+}
+// FEATURED EVENTS
+.block-views-featured-events-block {
+  margin: 40px auto;
+  
+  .view-featured-events {
+    border: 1px solid #ccc;
+  }
+  
+  .views-row {
+    padding: 20px 0px;
+    
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+  
+  .more-link {
+    padding: 20px 15px;
+    text-align: left;
+  }
+}

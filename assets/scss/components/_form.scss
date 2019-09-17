@@ -1,0 +1,71 @@
+// GLOBAL FORM STYLES
+
+::-webkit-input-placeholder { color:#000; }
+::-moz-placeholder { color:#000; } /* firefox 19+ */
+:-ms-input-placeholder { color:#000; } /* ie */
+input:-moz-placeholder { color:#000; }
+
+.views-exposed-widget {
+	float: left;
+	margin-right: 10px;
+}
+
+.form-text, .form-select, .form-submit {
+	border-radius: 5px;
+	border: 1px solid #cccccc;
+	font-size: 14px;
+	height: 32px;
+}
+
+
+.view-filters {
+	margin: 20px auto;
+}
+
+.form-text {
+	padding-left: 10px;
+	width: 185px;
+}
+
+.form-select {
+	width: 270px;
+}
+
+.form-submit {
+	color: #fff;
+	border-radius: 13px;
+	padding: 0 10px;
+}
+
+/*.form-item {
+	margin: 0;
+}*/
+
+// PERSON-GRID
+.view-faculty-listing-block {
+	.form-submit {
+    background-color: #3676bb;
+	}
+}
+
+// EVENT LISTING
+.view-gmu-event {
+	.form-submit {
+    background-color: $sea-blue;
+	}  
+}
+
+// SELECT MULTIPLE FIX
+select[multiple]{
+  height:auto;
+}
+
+// FIX FOR VIEWS 3.12 - Remove Description
+.views-widget{
+	.form-item{
+		.description{
+			display: none;
+			visibility: hidden;
+		}
+	}
+}

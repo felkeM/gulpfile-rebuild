@@ -1,0 +1,36 @@
+.cta-button {
+	
+	text-align: center;
+	border: 1px solid #d6d6d6;
+	display: inline-block;
+	padding: 20px 0;
+	
+	a {
+		width: 100%;
+		color: #666;
+		background: red;
+	}
+	
+	@media #{$large-up} {
+		@include grid-column {
+			$columns: 3,
+			$collapse: true	
+		}
+					
+		&:nth-child(n+2) {
+			margin-left: 40px;
+		}	
+	}
+	
+	@media #{$medium-up} {
+		@include grid-column {
+			$columns: 6
+		}
+		
+	}
+}
+	
+img, a {
+	display: inline;
+	margin: 5px;
+}
